@@ -1,0 +1,479 @@
+﻿namespace FormProgramacion
+{
+    partial class frmCinema
+    {
+        /// <summary>
+        /// Variable del diseñador necesaria.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Limpiar los recursos que se estén usando.
+        /// </summary>
+        /// <param name="disposing">true si los recursos administrados se deben desechar; false en caso contrario.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Código generado por el Diseñador de Windows Forms
+
+        /// <summary>
+        /// Método necesario para admitir el Diseñador. No se puede modificar
+        /// el contenido de este método con el editor de código.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCinema));
+            this.panelMenu = new System.Windows.Forms.Panel();
+            this.btnReservas = new FontAwesome.Sharp.IconButton();
+            this.btnGenero = new FontAwesome.Sharp.IconButton();
+            this.iconButton6 = new FontAwesome.Sharp.IconButton();
+            this.btnPeriodos = new FontAwesome.Sharp.IconButton();
+            this.btnPagos = new FontAwesome.Sharp.IconButton();
+            this.btnComprobantes = new FontAwesome.Sharp.IconButton();
+            this.btnActores = new FontAwesome.Sharp.IconButton();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.lblFormularioHijo = new System.Windows.Forms.Label();
+            this.iconoFormularioHijo = new FontAwesome.Sharp.IconPictureBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panelEscritorio = new System.Windows.Forms.Panel();
+            this.btnMinimizar = new FontAwesome.Sharp.IconButton();
+            this.btnExpandir = new FontAwesome.Sharp.IconButton();
+            this.btnExit = new FontAwesome.Sharp.IconButton();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panelMenu.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconoFormularioHijo)).BeginInit();
+            this.panelEscritorio.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // panelMenu
+            // 
+            this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.panelMenu.Controls.Add(this.btnReservas);
+            this.panelMenu.Controls.Add(this.btnGenero);
+            this.panelMenu.Controls.Add(this.iconButton6);
+            this.panelMenu.Controls.Add(this.btnPeriodos);
+            this.panelMenu.Controls.Add(this.btnPagos);
+            this.panelMenu.Controls.Add(this.btnComprobantes);
+            this.panelMenu.Controls.Add(this.btnActores);
+            this.panelMenu.Controls.Add(this.iconButton1);
+            this.panelMenu.Controls.Add(this.panel2);
+            this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelMenu.Location = new System.Drawing.Point(0, 0);
+            this.panelMenu.Name = "panelMenu";
+            this.panelMenu.Size = new System.Drawing.Size(210, 520);
+            this.panelMenu.TabIndex = 0;
+            // 
+            // btnReservas
+            // 
+            this.btnReservas.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnReservas.FlatAppearance.BorderSize = 0;
+            this.btnReservas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReservas.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btnReservas.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnReservas.IconChar = FontAwesome.Sharp.IconChar.Unlock;
+            this.btnReservas.IconColor = System.Drawing.Color.Gainsboro;
+            this.btnReservas.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnReservas.IconSize = 30;
+            this.btnReservas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReservas.Location = new System.Drawing.Point(0, 455);
+            this.btnReservas.Name = "btnReservas";
+            this.btnReservas.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnReservas.Rotation = 0D;
+            this.btnReservas.Size = new System.Drawing.Size(210, 60);
+            this.btnReservas.TabIndex = 8;
+            this.btnReservas.Text = "Reservas";
+            this.btnReservas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReservas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnReservas.UseVisualStyleBackColor = true;
+            this.btnReservas.Click += new System.EventHandler(this.btnReservas_Click);
+            // 
+            // btnGenero
+            // 
+            this.btnGenero.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnGenero.FlatAppearance.BorderSize = 0;
+            this.btnGenero.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGenero.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btnGenero.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnGenero.IconChar = FontAwesome.Sharp.IconChar.Grav;
+            this.btnGenero.IconColor = System.Drawing.Color.Gainsboro;
+            this.btnGenero.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnGenero.IconSize = 30;
+            this.btnGenero.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGenero.Location = new System.Drawing.Point(0, 400);
+            this.btnGenero.Name = "btnGenero";
+            this.btnGenero.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnGenero.Rotation = 0D;
+            this.btnGenero.Size = new System.Drawing.Size(210, 55);
+            this.btnGenero.TabIndex = 7;
+            this.btnGenero.Text = "Género";
+            this.btnGenero.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGenero.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnGenero.UseVisualStyleBackColor = true;
+            this.btnGenero.Click += new System.EventHandler(this.btnGenero_Click);
+            // 
+            // iconButton6
+            // 
+            this.iconButton6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.iconButton6.FlatAppearance.BorderSize = 0;
+            this.iconButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton6.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.iconButton6.ForeColor = System.Drawing.Color.Gainsboro;
+            this.iconButton6.IconChar = FontAwesome.Sharp.IconChar.TicketAlt;
+            this.iconButton6.IconColor = System.Drawing.Color.Gainsboro;
+            this.iconButton6.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton6.IconSize = 30;
+            this.iconButton6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton6.Location = new System.Drawing.Point(0, 345);
+            this.iconButton6.Name = "iconButton6";
+            this.iconButton6.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.iconButton6.Rotation = 0D;
+            this.iconButton6.Size = new System.Drawing.Size(210, 55);
+            this.iconButton6.TabIndex = 6;
+            this.iconButton6.Text = "Tickets";
+            this.iconButton6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButton6.UseVisualStyleBackColor = true;
+            this.iconButton6.Click += new System.EventHandler(this.iconButton6_Click);
+            // 
+            // btnPeriodos
+            // 
+            this.btnPeriodos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPeriodos.FlatAppearance.BorderSize = 0;
+            this.btnPeriodos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPeriodos.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btnPeriodos.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnPeriodos.IconChar = FontAwesome.Sharp.IconChar.CalendarAlt;
+            this.btnPeriodos.IconColor = System.Drawing.Color.Gainsboro;
+            this.btnPeriodos.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnPeriodos.IconSize = 30;
+            this.btnPeriodos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPeriodos.Location = new System.Drawing.Point(0, 290);
+            this.btnPeriodos.Name = "btnPeriodos";
+            this.btnPeriodos.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnPeriodos.Rotation = 0D;
+            this.btnPeriodos.Size = new System.Drawing.Size(210, 55);
+            this.btnPeriodos.TabIndex = 5;
+            this.btnPeriodos.Text = "Periodos";
+            this.btnPeriodos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPeriodos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnPeriodos.UseVisualStyleBackColor = true;
+            this.btnPeriodos.Click += new System.EventHandler(this.iconButton5_Click);
+            // 
+            // btnPagos
+            // 
+            this.btnPagos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPagos.FlatAppearance.BorderSize = 0;
+            this.btnPagos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPagos.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btnPagos.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnPagos.IconChar = FontAwesome.Sharp.IconChar.CcVisa;
+            this.btnPagos.IconColor = System.Drawing.Color.Gainsboro;
+            this.btnPagos.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnPagos.IconSize = 30;
+            this.btnPagos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPagos.Location = new System.Drawing.Point(0, 235);
+            this.btnPagos.Name = "btnPagos";
+            this.btnPagos.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnPagos.Rotation = 0D;
+            this.btnPagos.Size = new System.Drawing.Size(210, 55);
+            this.btnPagos.TabIndex = 4;
+            this.btnPagos.Text = "Pagos";
+            this.btnPagos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPagos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnPagos.UseVisualStyleBackColor = true;
+            this.btnPagos.Click += new System.EventHandler(this.iconButton4_Click);
+            // 
+            // btnComprobantes
+            // 
+            this.btnComprobantes.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnComprobantes.FlatAppearance.BorderSize = 0;
+            this.btnComprobantes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnComprobantes.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btnComprobantes.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnComprobantes.IconChar = FontAwesome.Sharp.IconChar.CashRegister;
+            this.btnComprobantes.IconColor = System.Drawing.Color.Gainsboro;
+            this.btnComprobantes.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnComprobantes.IconSize = 30;
+            this.btnComprobantes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnComprobantes.Location = new System.Drawing.Point(0, 180);
+            this.btnComprobantes.Name = "btnComprobantes";
+            this.btnComprobantes.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnComprobantes.Rotation = 0D;
+            this.btnComprobantes.Size = new System.Drawing.Size(210, 55);
+            this.btnComprobantes.TabIndex = 3;
+            this.btnComprobantes.Text = "Comprobantes";
+            this.btnComprobantes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnComprobantes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnComprobantes.UseVisualStyleBackColor = true;
+            this.btnComprobantes.Click += new System.EventHandler(this.iconButton3_Click);
+            // 
+            // btnActores
+            // 
+            this.btnActores.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnActores.FlatAppearance.BorderSize = 0;
+            this.btnActores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnActores.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btnActores.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnActores.IconChar = FontAwesome.Sharp.IconChar.TheaterMasks;
+            this.btnActores.IconColor = System.Drawing.Color.Gainsboro;
+            this.btnActores.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnActores.IconSize = 30;
+            this.btnActores.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnActores.Location = new System.Drawing.Point(0, 125);
+            this.btnActores.Name = "btnActores";
+            this.btnActores.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnActores.Rotation = 0D;
+            this.btnActores.Size = new System.Drawing.Size(210, 55);
+            this.btnActores.TabIndex = 2;
+            this.btnActores.Text = "Actores";
+            this.btnActores.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnActores.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnActores.UseVisualStyleBackColor = true;
+            this.btnActores.Click += new System.EventHandler(this.iconButton2_Click);
+            // 
+            // iconButton1
+            // 
+            this.iconButton1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.iconButton1.FlatAppearance.BorderSize = 0;
+            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton1.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.iconButton1.ForeColor = System.Drawing.Color.Gainsboro;
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.UmbrellaBeach;
+            this.iconButton1.IconColor = System.Drawing.Color.Gainsboro;
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton1.IconSize = 30;
+            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton1.Location = new System.Drawing.Point(0, 70);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.iconButton1.Rotation = 0D;
+            this.iconButton1.Size = new System.Drawing.Size(210, 55);
+            this.iconButton1.TabIndex = 1;
+            this.iconButton1.Text = "Temporadas";
+            this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButton1.UseVisualStyleBackColor = true;
+            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(210, 70);
+            this.panel2.TabIndex = 0;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.panel1.Controls.Add(this.btnExit);
+            this.panel1.Controls.Add(this.btnExpandir);
+            this.panel1.Controls.Add(this.btnMinimizar);
+            this.panel1.Controls.Add(this.lblFormularioHijo);
+            this.panel1.Controls.Add(this.iconoFormularioHijo);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(210, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(909, 61);
+            this.panel1.TabIndex = 1;
+            // 
+            // lblFormularioHijo
+            // 
+            this.lblFormularioHijo.AutoSize = true;
+            this.lblFormularioHijo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFormularioHijo.ForeColor = System.Drawing.Color.MediumPurple;
+            this.lblFormularioHijo.Location = new System.Drawing.Point(57, 22);
+            this.lblFormularioHijo.Name = "lblFormularioHijo";
+            this.lblFormularioHijo.Size = new System.Drawing.Size(45, 16);
+            this.lblFormularioHijo.TabIndex = 1;
+            this.lblFormularioHijo.Text = "Home";
+            // 
+            // iconoFormularioHijo
+            // 
+            this.iconoFormularioHijo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.iconoFormularioHijo.ForeColor = System.Drawing.Color.MediumPurple;
+            this.iconoFormularioHijo.IconChar = FontAwesome.Sharp.IconChar.Home;
+            this.iconoFormularioHijo.IconColor = System.Drawing.Color.MediumPurple;
+            this.iconoFormularioHijo.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconoFormularioHijo.Location = new System.Drawing.Point(19, 12);
+            this.iconoFormularioHijo.Name = "iconoFormularioHijo";
+            this.iconoFormularioHijo.Size = new System.Drawing.Size(32, 32);
+            this.iconoFormularioHijo.TabIndex = 0;
+            this.iconoFormularioHijo.TabStop = false;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(24)))), ((int)(((byte)(58)))));
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(210, 61);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(909, 9);
+            this.panel3.TabIndex = 2;
+            // 
+            // panelEscritorio
+            // 
+            this.panelEscritorio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.panelEscritorio.Controls.Add(this.pictureBox2);
+            this.panelEscritorio.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelEscritorio.Location = new System.Drawing.Point(210, 70);
+            this.panelEscritorio.Name = "panelEscritorio";
+            this.panelEscritorio.Size = new System.Drawing.Size(909, 450);
+            this.panelEscritorio.TabIndex = 3;
+            // 
+            // btnMinimizar
+            // 
+            this.btnMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMinimizar.FlatAppearance.BorderSize = 0;
+            this.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMinimizar.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btnMinimizar.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnMinimizar.IconChar = FontAwesome.Sharp.IconChar.Minus;
+            this.btnMinimizar.IconColor = System.Drawing.Color.Gainsboro;
+            this.btnMinimizar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnMinimizar.IconSize = 15;
+            this.btnMinimizar.Location = new System.Drawing.Point(816, 3);
+            this.btnMinimizar.Name = "btnMinimizar";
+            this.btnMinimizar.Rotation = 0D;
+            this.btnMinimizar.Size = new System.Drawing.Size(28, 23);
+            this.btnMinimizar.TabIndex = 2;
+            this.btnMinimizar.UseVisualStyleBackColor = true;
+            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
+            // 
+            // btnExpandir
+            // 
+            this.btnExpandir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnExpandir.FlatAppearance.BorderSize = 0;
+            this.btnExpandir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExpandir.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btnExpandir.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnExpandir.IconChar = FontAwesome.Sharp.IconChar.ExternalLinkAlt;
+            this.btnExpandir.IconColor = System.Drawing.Color.Gainsboro;
+            this.btnExpandir.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnExpandir.IconSize = 15;
+            this.btnExpandir.Location = new System.Drawing.Point(844, 3);
+            this.btnExpandir.Name = "btnExpandir";
+            this.btnExpandir.Rotation = 0D;
+            this.btnExpandir.Size = new System.Drawing.Size(28, 23);
+            this.btnExpandir.TabIndex = 2;
+            this.btnExpandir.UseVisualStyleBackColor = true;
+            this.btnExpandir.Click += new System.EventHandler(this.btnExpandir_Click);
+            // 
+            // btnExit
+            // 
+            this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnExit.FlatAppearance.BorderSize = 0;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btnExit.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnExit.IconChar = FontAwesome.Sharp.IconChar.Times;
+            this.btnExit.IconColor = System.Drawing.Color.Gainsboro;
+            this.btnExit.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnExit.IconSize = 15;
+            this.btnExit.Location = new System.Drawing.Point(872, 3);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Rotation = 0D;
+            this.btnExit.Size = new System.Drawing.Size(28, 23);
+            this.btnExit.TabIndex = 2;
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.iconButton4_Click_1);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe Script", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.Control;
+            this.label1.Location = new System.Drawing.Point(74, 22);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(121, 38);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "CINEMA";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(-44, -238);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(1024, 768);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(18, 16);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(50, 38);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            // 
+            // frmCinema
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1119, 520);
+            this.Controls.Add(this.panelEscritorio);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelMenu);
+            this.Name = "frmCinema";
+            this.Text = "Form1";
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.panelMenu.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconoFormularioHijo)).EndInit();
+            this.panelEscritorio.ResumeLayout(false);
+            this.panelEscritorio.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.Panel panelMenu;
+        private FontAwesome.Sharp.IconButton btnPagos;
+        private FontAwesome.Sharp.IconButton btnComprobantes;
+        private FontAwesome.Sharp.IconButton btnActores;
+        private FontAwesome.Sharp.IconButton iconButton1;
+        private System.Windows.Forms.Panel panel2;
+        private FontAwesome.Sharp.IconButton iconButton6;
+        private FontAwesome.Sharp.IconButton btnPeriodos;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label lblFormularioHijo;
+        private FontAwesome.Sharp.IconPictureBox iconoFormularioHijo;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panelEscritorio;
+        private FontAwesome.Sharp.IconButton btnReservas;
+        private FontAwesome.Sharp.IconButton btnGenero;
+        private FontAwesome.Sharp.IconButton btnMinimizar;
+        private FontAwesome.Sharp.IconButton btnExit;
+        private FontAwesome.Sharp.IconButton btnExpandir;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+    }
+}
+
