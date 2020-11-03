@@ -56,7 +56,7 @@
             this.btnBorrar.Location = new System.Drawing.Point(285, 311);
             this.btnBorrar.Name = "btnBorrar";
             this.btnBorrar.Size = new System.Drawing.Size(99, 48);
-            this.btnBorrar.TabIndex = 17;
+            this.btnBorrar.TabIndex = 7;
             this.btnBorrar.Text = "Borrar Pelicula";
             this.btnBorrar.UseVisualStyleBackColor = true;
             // 
@@ -69,7 +69,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(108, 396);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(99, 36);
-            this.btnCancelar.TabIndex = 19;
+            this.btnCancelar.TabIndex = 8;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click_1);
@@ -84,7 +84,7 @@
             this.btnEditar.Location = new System.Drawing.Point(167, 311);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(99, 48);
-            this.btnEditar.TabIndex = 20;
+            this.btnEditar.TabIndex = 6;
             this.btnEditar.Text = "Editar Pelicula";
             this.btnEditar.UseVisualStyleBackColor = true;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click_1);
@@ -99,7 +99,7 @@
             this.btnNuevo.Location = new System.Drawing.Point(49, 311);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(99, 48);
-            this.btnNuevo.TabIndex = 21;
+            this.btnNuevo.TabIndex = 5;
             this.btnNuevo.Text = "Nueva Pelicula";
             this.btnNuevo.UseVisualStyleBackColor = true;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click_1);
@@ -112,7 +112,7 @@
             this.lstPeliculas.Location = new System.Drawing.Point(439, 25);
             this.lstPeliculas.Name = "lstPeliculas";
             this.lstPeliculas.Size = new System.Drawing.Size(277, 319);
-            this.lstPeliculas.TabIndex = 16;
+            this.lstPeliculas.TabIndex = 10;
             this.lstPeliculas.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // cboClasificacion
@@ -121,7 +121,7 @@
             this.cboClasificacion.Location = new System.Drawing.Point(115, 245);
             this.cboClasificacion.Name = "cboClasificacion";
             this.cboClasificacion.Size = new System.Drawing.Size(121, 21);
-            this.cboClasificacion.TabIndex = 12;
+            this.cboClasificacion.TabIndex = 4;
             // 
             // label5
             // 
@@ -131,7 +131,7 @@
             this.label5.Location = new System.Drawing.Point(14, 249);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(79, 13);
-            this.label5.TabIndex = 8;
+            this.label5.TabIndex = 15;
             this.label5.Text = "Clasificacion";
             // 
             // cboIdiomas
@@ -140,7 +140,7 @@
             this.cboIdiomas.Location = new System.Drawing.Point(115, 190);
             this.cboIdiomas.Name = "cboIdiomas";
             this.cboIdiomas.Size = new System.Drawing.Size(121, 21);
-            this.cboIdiomas.TabIndex = 14;
+            this.cboIdiomas.TabIndex = 3;
             // 
             // label3
             // 
@@ -150,7 +150,7 @@
             this.label3.Location = new System.Drawing.Point(12, 140);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(81, 13);
-            this.label3.TabIndex = 10;
+            this.label3.TabIndex = 13;
             this.label3.Text = "Nacionalidad";
             // 
             // cboGenero
@@ -159,7 +159,7 @@
             this.cboGenero.Location = new System.Drawing.Point(115, 81);
             this.cboGenero.Name = "cboGenero";
             this.cboGenero.Size = new System.Drawing.Size(121, 21);
-            this.cboGenero.TabIndex = 15;
+            this.cboGenero.TabIndex = 1;
             // 
             // label2
             // 
@@ -169,7 +169,7 @@
             this.label2.Location = new System.Drawing.Point(45, 85);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(48, 13);
-            this.label2.TabIndex = 11;
+            this.label2.TabIndex = 12;
             this.label2.Text = "Genero";
             // 
             // label1
@@ -180,15 +180,15 @@
             this.label1.Location = new System.Drawing.Point(54, 29);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(39, 13);
-            this.label1.TabIndex = 7;
+            this.label1.TabIndex = 11;
             this.label1.Text = "Titulo";
             // 
             // txtTitulo
             // 
             this.txtTitulo.Location = new System.Drawing.Point(115, 25);
             this.txtTitulo.Name = "txtTitulo";
-            this.txtTitulo.Size = new System.Drawing.Size(121, 20);
-            this.txtTitulo.TabIndex = 6;
+            this.txtTitulo.Size = new System.Drawing.Size(248, 20);
+            this.txtTitulo.TabIndex = 0;
             // 
             // btnGrabar
             // 
@@ -200,7 +200,7 @@
             this.btnGrabar.Location = new System.Drawing.Point(230, 390);
             this.btnGrabar.Name = "btnGrabar";
             this.btnGrabar.Size = new System.Drawing.Size(99, 48);
-            this.btnGrabar.TabIndex = 20;
+            this.btnGrabar.TabIndex = 9;
             this.btnGrabar.Text = "Guardar Cambios";
             this.btnGrabar.UseVisualStyleBackColor = true;
             this.btnGrabar.Click += new System.EventHandler(this.btnGrabar_Click);
@@ -213,7 +213,7 @@
             this.label4.Location = new System.Drawing.Point(49, 194);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(44, 13);
-            this.label4.TabIndex = 10;
+            this.label4.TabIndex = 14;
             this.label4.Text = "Idioma";
             // 
             // txtNacionalidad
@@ -221,7 +221,7 @@
             this.txtNacionalidad.Location = new System.Drawing.Point(115, 136);
             this.txtNacionalidad.Name = "txtNacionalidad";
             this.txtNacionalidad.Size = new System.Drawing.Size(121, 20);
-            this.txtNacionalidad.TabIndex = 22;
+            this.txtNacionalidad.TabIndex = 2;
             // 
             // Peliculas
             // 

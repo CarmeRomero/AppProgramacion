@@ -20,7 +20,7 @@ namespace FormProgramacion
             cnn = new SqlConnection();
             cmd = new SqlCommand();
             dr = null;
-            cadenaConexion = @"Data Source=DESKTOP-B8TK374;Initial Catalog=CINE;Integrated Security=True";
+            cadenaConexion = @"Data Source=database-1.c8opvcsreaob.sa-east-1.rds.amazonaws.com;Initial Catalog=CINE;User ID=PabloCausa; Password = Thereason2020";
         }
 
         public CNN(string cadenaConexion)
