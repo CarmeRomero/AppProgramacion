@@ -14,6 +14,12 @@ namespace FormProgramacion
     {
         CNN cnn = new CNN();
         List<Pelicula> lP = new List<Pelicula>();
+        enum accion
+        {
+            nuevo,
+            editado
+        }
+        accion miAccion;
        
         public Peliculas()
         {
@@ -36,12 +42,14 @@ namespace FormProgramacion
             btnNuevo.Enabled = !x;
             btnEditar.Enabled = !x;
             btnBorrar.Enabled = !x;
+            lstPeliculas.Enabled = !x;
            
 
         }
         public void limpiar()
         {
             txtTitulo.Text = string.Empty;
+            txtNacionalidad.Text = string.Empty;
             cboClasificacion.SelectedIndex = -1;
             cboGenero.SelectedIndex = -1;
             cboIdiomas.SelectedIndex = -1;
@@ -101,7 +109,7 @@ namespace FormProgramacion
        
         private void Peliculas_Load(object sender, EventArgs e)
         {
-            
+            limpiar();
             habilitarCampos(false);
             cargarCombos(cboClasificacion, "CLASIFICACIONES");
             cargarCombos(cboGenero, "GENEROS");
@@ -129,6 +137,7 @@ namespace FormProgramacion
         {
             habilitarCampos(true);
             limpiar();
+            txtTitulo.Focus();
 
         }
 
@@ -156,6 +165,11 @@ namespace FormProgramacion
         private void cargarCampos(int selectedIndex)
         {
             int k = lstPeliculas.SelectedIndex;
+            txtTitulo.Text = lP[k].pTitulo;
+            cboGenero.SelectedValue = lP[k].pId_genero;
+            txtNacionalidad.Text = lP[k].pNacionalidad;
+            cboIdiomas.SelectedValue = lP[k].pId_idioma;
+            cboClasificacion.SelectedValue = lP[k].pId_clasificacion;
         }
     }
 }
