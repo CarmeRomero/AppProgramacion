@@ -39,24 +39,24 @@
             this.btnActores = new FontAwesome.Sharp.IconButton();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnExit = new FontAwesome.Sharp.IconButton();
+            this.btnExpandir = new FontAwesome.Sharp.IconButton();
+            this.btnMinimizar = new FontAwesome.Sharp.IconButton();
             this.lblFormularioHijo = new System.Windows.Forms.Label();
             this.iconoFormularioHijo = new FontAwesome.Sharp.IconPictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panelEscritorio = new System.Windows.Forms.Panel();
-            this.btnMinimizar = new FontAwesome.Sharp.IconButton();
-            this.btnExpandir = new FontAwesome.Sharp.IconButton();
-            this.btnExit = new FontAwesome.Sharp.IconButton();
-            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelMenu.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconoFormularioHijo)).BeginInit();
             this.panelEscritorio.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -239,7 +239,7 @@
             this.btnActores.Rotation = 0D;
             this.btnActores.Size = new System.Drawing.Size(210, 55);
             this.btnActores.TabIndex = 2;
-            this.btnActores.Text = "Actores";
+            this.btnActores.Text = "Peliculas";
             this.btnActores.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnActores.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnActores.UseVisualStyleBackColor = true;
@@ -279,6 +279,27 @@
             this.panel2.Size = new System.Drawing.Size(210, 70);
             this.panel2.TabIndex = 0;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(18, 16);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(50, 38);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe Script", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.Control;
+            this.label1.Location = new System.Drawing.Point(74, 22);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(121, 38);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "CINEMA";
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
@@ -292,6 +313,63 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(909, 61);
             this.panel1.TabIndex = 1;
+            // 
+            // btnExit
+            // 
+            this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnExit.FlatAppearance.BorderSize = 0;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btnExit.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnExit.IconChar = FontAwesome.Sharp.IconChar.Times;
+            this.btnExit.IconColor = System.Drawing.Color.Gainsboro;
+            this.btnExit.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnExit.IconSize = 15;
+            this.btnExit.Location = new System.Drawing.Point(872, 3);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Rotation = 0D;
+            this.btnExit.Size = new System.Drawing.Size(28, 23);
+            this.btnExit.TabIndex = 2;
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.iconButton4_Click_1);
+            // 
+            // btnExpandir
+            // 
+            this.btnExpandir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnExpandir.FlatAppearance.BorderSize = 0;
+            this.btnExpandir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExpandir.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btnExpandir.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnExpandir.IconChar = FontAwesome.Sharp.IconChar.ExternalLinkAlt;
+            this.btnExpandir.IconColor = System.Drawing.Color.Gainsboro;
+            this.btnExpandir.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnExpandir.IconSize = 15;
+            this.btnExpandir.Location = new System.Drawing.Point(844, 3);
+            this.btnExpandir.Name = "btnExpandir";
+            this.btnExpandir.Rotation = 0D;
+            this.btnExpandir.Size = new System.Drawing.Size(28, 23);
+            this.btnExpandir.TabIndex = 2;
+            this.btnExpandir.UseVisualStyleBackColor = true;
+            this.btnExpandir.Click += new System.EventHandler(this.btnExpandir_Click);
+            // 
+            // btnMinimizar
+            // 
+            this.btnMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMinimizar.FlatAppearance.BorderSize = 0;
+            this.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMinimizar.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btnMinimizar.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnMinimizar.IconChar = FontAwesome.Sharp.IconChar.Minus;
+            this.btnMinimizar.IconColor = System.Drawing.Color.Gainsboro;
+            this.btnMinimizar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnMinimizar.IconSize = 15;
+            this.btnMinimizar.Location = new System.Drawing.Point(816, 3);
+            this.btnMinimizar.Name = "btnMinimizar";
+            this.btnMinimizar.Rotation = 0D;
+            this.btnMinimizar.Size = new System.Drawing.Size(28, 23);
+            this.btnMinimizar.TabIndex = 2;
+            this.btnMinimizar.UseVisualStyleBackColor = true;
+            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
             // 
             // lblFormularioHijo
             // 
@@ -336,74 +414,6 @@
             this.panelEscritorio.Size = new System.Drawing.Size(909, 450);
             this.panelEscritorio.TabIndex = 3;
             // 
-            // btnMinimizar
-            // 
-            this.btnMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMinimizar.FlatAppearance.BorderSize = 0;
-            this.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMinimizar.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.btnMinimizar.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnMinimizar.IconChar = FontAwesome.Sharp.IconChar.Minus;
-            this.btnMinimizar.IconColor = System.Drawing.Color.Gainsboro;
-            this.btnMinimizar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnMinimizar.IconSize = 15;
-            this.btnMinimizar.Location = new System.Drawing.Point(816, 3);
-            this.btnMinimizar.Name = "btnMinimizar";
-            this.btnMinimizar.Rotation = 0D;
-            this.btnMinimizar.Size = new System.Drawing.Size(28, 23);
-            this.btnMinimizar.TabIndex = 2;
-            this.btnMinimizar.UseVisualStyleBackColor = true;
-            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
-            // 
-            // btnExpandir
-            // 
-            this.btnExpandir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnExpandir.FlatAppearance.BorderSize = 0;
-            this.btnExpandir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExpandir.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.btnExpandir.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnExpandir.IconChar = FontAwesome.Sharp.IconChar.ExternalLinkAlt;
-            this.btnExpandir.IconColor = System.Drawing.Color.Gainsboro;
-            this.btnExpandir.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnExpandir.IconSize = 15;
-            this.btnExpandir.Location = new System.Drawing.Point(844, 3);
-            this.btnExpandir.Name = "btnExpandir";
-            this.btnExpandir.Rotation = 0D;
-            this.btnExpandir.Size = new System.Drawing.Size(28, 23);
-            this.btnExpandir.TabIndex = 2;
-            this.btnExpandir.UseVisualStyleBackColor = true;
-            this.btnExpandir.Click += new System.EventHandler(this.btnExpandir_Click);
-            // 
-            // btnExit
-            // 
-            this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnExit.FlatAppearance.BorderSize = 0;
-            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExit.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.btnExit.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnExit.IconChar = FontAwesome.Sharp.IconChar.Times;
-            this.btnExit.IconColor = System.Drawing.Color.Gainsboro;
-            this.btnExit.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnExit.IconSize = 15;
-            this.btnExit.Location = new System.Drawing.Point(872, 3);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Rotation = 0D;
-            this.btnExit.Size = new System.Drawing.Size(28, 23);
-            this.btnExit.TabIndex = 2;
-            this.btnExit.UseVisualStyleBackColor = true;
-            this.btnExit.Click += new System.EventHandler(this.iconButton4_Click_1);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe Script", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(74, 22);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(121, 38);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "CINEMA";
-            // 
             // pictureBox2
             // 
             this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -414,16 +424,6 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(18, 16);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(50, 38);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
             // 
             // frmCinema
             // 
@@ -440,13 +440,13 @@
             this.panelMenu.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconoFormularioHijo)).EndInit();
             this.panelEscritorio.ResumeLayout(false);
             this.panelEscritorio.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

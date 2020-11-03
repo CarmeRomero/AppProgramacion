@@ -121,12 +121,12 @@ namespace FormProgramacion
         private void iconButton1_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color1);
-            AbrirFormularioHijo(new Temporadas());
+            AbrirFormularioHijo(new Clientes());
         }
         private void iconButton2_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color2);
-            AbrirFormularioHijo(new Actores());
+            AbrirFormularioHijo(new Peliculas());
         }
 
         private void iconButton3_Click(object sender, EventArgs e)
