@@ -67,15 +67,24 @@ namespace FormProgramacion
             cnn.desconectar();
             cnn.pCmd.Parameters.Clear();
         }
-        public void borrar(int codigo)
+        public void borrar(Pelicula p)
         {
-            string sentenciaSQL = "";
+            string sentenciaSQL = "UPDATE PELICULAS SET " +
+                            "Cancelada = @param1 " +
+                            
+                            "WHERE Id_pelicula = @pk";
             cnn.conectar();
+<<<<<<< HEAD
             sentenciaSQL = "DELETE FROM PELICULAS " +
                     "WHERE id_pelicula = " + codigo;
+=======
+>>>>>>> 0f89b0f8c59fc605e048afa46616efbda6fc3528
             cnn.pCmd.CommandText = sentenciaSQL;
+            cnn.pCmd.Parameters.AddWithValue("@param1", 1);
+            cnn.pCmd.Parameters.AddWithValue("@pk", p.pId_pelicula);
             cnn.pCmd.ExecuteNonQuery();
             cnn.desconectar();
+            cnn.pCmd.Parameters.Clear();
 
         }
     }

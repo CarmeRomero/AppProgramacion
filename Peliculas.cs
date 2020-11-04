@@ -44,8 +44,6 @@ namespace FormProgramacion
             btnEditar.Enabled = !x;
             btnBorrar.Enabled = !x;
             lstPeliculas.Enabled =! x;
-           
-
         }
         public void limpiar()
         {
@@ -86,7 +84,9 @@ namespace FormProgramacion
                     p.pId_idioma = cnn.pDr.GetInt32(4);
                 if (!cnn.pDr.IsDBNull(5))
                     p.pId_clasificacion = cnn.pDr.GetInt32(5);
-                lP.Add(p);
+                if(cnn.pDr.GetInt32(6)==0)
+                    lP.Add(p);
+
             }
             cnn.pDr.Close();
             cnn.desconectar();
@@ -148,7 +148,7 @@ namespace FormProgramacion
 
         private void btnEditar_Click_1(object sender, EventArgs e)
         {
-            if (lstPeliculas.SelectedIndex >= 0)
+            if (lstPeliculas.SelectedIndex >= 0 || !string.IsNullOrEmpty(txtTitulo.Text))
             {
                 miAccion = accion.editado;
                 habilitarCampos(true);
@@ -163,7 +163,7 @@ namespace FormProgramacion
         private void btnCancelar_Click_1(object sender, EventArgs e)
         {
             habilitarCampos(false);
-            limpiar();
+            cargarCampos(1);
             txtTitulo.Focus();
         }
 
@@ -226,35 +226,47 @@ namespace FormProgramacion
 
         private bool validarCampos()
         {
-            if (string.IsNullOrEmpty(txtTitulo.Text))
+            if (miAccion == accion.nuevo)
             {
-                MessageBox.Show("Debe ingresar un titulo", "Completar");
-                txtTitulo.Focus();
-                return false;
-            }
-            if (cboGenero.SelectedIndex == -1)
-            {
-                MessageBox.Show("Debe ingresar un genero", "Completar");
-                cboGenero.Focus();
-                return false;
-            }
-            if (string.IsNullOrEmpty(txtNacionalidad.Text))
-            {
-                MessageBox.Show("Debe ingresar una nacionalidad", "Completar");
-                txtTitulo.Focus();
-                return false;
-            }
-            if (cboIdiomas.SelectedIndex == -1)
-            {
-                MessageBox.Show("Debe ingresar un idioma", "Completar");
-                cboIdiomas.Focus();
-                return false;
-            }
-            if (cboClasificacion.SelectedIndex == -1)
-            {
-                MessageBox.Show("Debe ingresar una clasificacion", "Completar");
-                cboClasificacion.Focus();
-                return false;
+                if (string.IsNullOrEmpty(txtTitulo.Text))
+                {
+                    MessageBox.Show("Debe ingresar un titulo", "Completar");
+                    txtTitulo.Focus();
+                    return false;
+                }
+                if (cboGenero.SelectedIndex == -1)
+                {
+                    MessageBox.Show("Debe ingresar un genero", "Completar");
+                    cboGenero.Focus();
+                    return false;
+                }
+                if (string.IsNullOrEmpty(txtNacionalidad.Text))
+                {
+                    MessageBox.Show("Debe ingresar una nacionalidad", "Completar");
+                    txtTitulo.Focus();
+                    return false;
+                }
+                if (cboIdiomas.SelectedIndex == -1)
+                {
+                    MessageBox.Show("Debe ingresar un idioma", "Completar");
+                    cboIdiomas.Focus();
+                    return false;
+                }
+                if (cboClasificacion.SelectedIndex == -1)
+                {
+                    MessageBox.Show("Debe ingresar una clasificacion", "Completar");
+                    cboClasificacion.Focus();
+                    return false;
+                }
+                else
+                {
+                    if (lstPeliculas.SelectedIndex < 0 || string.IsNullOrEmpty(txtTitulo.Text))
+                    {
+                        MessageBox.Show("Debe seleccionar una pelicula de la lista", "Seleccionar");
+                        lstPeliculas.Enabled = true;
+                        lstPeliculas.SelectedIndex = 0;
+                    }
+                }
             }
             return true;
         }
@@ -272,6 +284,28 @@ namespace FormProgramacion
             txtNacionalidad.Text = lP[k].pNacionalidad;
             cboIdiomas.SelectedValue = lP[k].pId_idioma;
             cboClasificacion.SelectedValue = lP[k].pId_clasificacion;
+        }
+
+        private void btnBorrar_Click(object sender, EventArgs e)
+        {
+            int k = lstPeliculas.SelectedIndex;
+            if (lstPeliculas.SelectedIndex >= 0)
+            {
+                if (MessageBox.Show("Esta seguro que desea eliminar esta pelicula?", "Eliminar",
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Warning,
+                    MessageBoxDefaultButton.Button1) == DialogResult.Yes)
+                {
+                    lP[k].borrar(lP[k]);
+                    limpiar();
+                    lP.Clear();
+                    cargarLista(lstPeliculas, "PELICULAS");
+                }
+                    
+                
+            }
+            else
+                MessageBox.Show("Debe seleccionar una pelicula a eliminar", "Item", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            
         }
     }
 }
