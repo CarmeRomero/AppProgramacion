@@ -26,6 +26,7 @@ namespace FormProgramacion
             InitializeComponent();
             autoCompleteText("NACIONALIDADES", txtNacionalidad);
             autoCompleteText("peliculas", txtTitulo);
+            miAccion = accion.editado;
 
         }
         public void habilitarCampos(bool x)
@@ -42,7 +43,7 @@ namespace FormProgramacion
             btnNuevo.Enabled = !x;
             btnEditar.Enabled = !x;
             btnBorrar.Enabled = !x;
-            lstPeliculas.Enabled = !x;
+            lstPeliculas.Enabled =! x;
            
 
         }
@@ -73,6 +74,8 @@ namespace FormProgramacion
             while (cnn.pDr.Read())
             {
                 Pelicula p = new Pelicula();
+                if (!cnn.pDr.IsDBNull(0))
+                    p.pId_pelicula = cnn.pDr.GetInt32(0);
                 if (!cnn.pDr.IsDBNull(1))
                     p.pTitulo = cnn.pDr.GetString(1);
                 if (!cnn.pDr.IsDBNull(2))
@@ -109,12 +112,13 @@ namespace FormProgramacion
        
         private void Peliculas_Load(object sender, EventArgs e)
         {
-            limpiar();
+            
             habilitarCampos(false);
             cargarCombos(cboClasificacion, "CLASIFICACIONES");
             cargarCombos(cboGenero, "GENEROS");
             cargarCombos(cboIdiomas, "IDIOMAS");
             cargarLista(lstPeliculas, "peliculas");
+            limpiar();
 
         }
         void autoCompleteText(string nombreTabla, TextBox txtbx)
@@ -135,6 +139,7 @@ namespace FormProgramacion
         }
         private void btnNuevo_Click_1(object sender, EventArgs e)
         {
+            miAccion = accion.nuevo;
             habilitarCampos(true);
             limpiar();
             txtTitulo.Focus();
@@ -143,18 +148,115 @@ namespace FormProgramacion
 
         private void btnEditar_Click_1(object sender, EventArgs e)
         {
-            habilitarCampos(true);
+            if (lstPeliculas.SelectedIndex >= 0)
+            {
+                miAccion = accion.editado;
+                habilitarCampos(true);
+                txtTitulo.Focus();
+            }
+            else
+                MessageBox.Show("Debe seleccionar una pelicula de la lista", "Seleccionar");
+            
 
         }
 
         private void btnCancelar_Click_1(object sender, EventArgs e)
         {
             habilitarCampos(false);
+            limpiar();
+            txtTitulo.Focus();
         }
 
         private void btnGrabar_Click(object sender, EventArgs e)
         {
-            habilitarCampos(false);
+            if (validarCampos())
+            {
+                Pelicula p = new Pelicula();
+                p.pTitulo = txtTitulo.Text;
+                p.pId_genero = (int)cboGenero.SelectedValue;
+                p.pNacionalidad = txtNacionalidad.Text;
+                cnn.leerTabla("NACIONALIDADES");
+
+                while (cnn.pDr.Read())
+                {
+                    if (p.pNacionalidad == cnn.pDr.GetString(1))
+                        p.pId_nacionalidad = cnn.pDr.GetInt32(0);
+                }
+                cnn.pDr.Close();
+                cnn.desconectar();
+                p.pId_idioma = (int)cboIdiomas.SelectedValue;
+                p.pId_clasificacion = (int)cboClasificacion.SelectedValue;
+                if(miAccion == accion.nuevo)
+                {
+                    p.nuevo(p);
+                    habilitarCampos(false);
+                }
+                else
+                {
+                    if (lstPeliculas.SelectedIndex >= 0)
+                    {
+                        int k = lstPeliculas.SelectedIndex;
+                        lP[k].pTitulo = txtTitulo.Text;
+                        lP[k].pId_genero = (int)cboGenero.SelectedValue;
+                        lP[k].pNacionalidad = txtNacionalidad.Text;
+                        cnn.leerTabla("NACIONALIDADES");
+
+                        while (cnn.pDr.Read())
+                        {
+                            if (lP[k].pNacionalidad == cnn.pDr.GetString(1))
+                                lP[k].pId_nacionalidad = cnn.pDr.GetInt32(0);
+                        }
+                        cnn.pDr.Close();
+                        cnn.desconectar();
+                        lP[k].pId_idioma = (int)cboClasificacion.SelectedValue;
+                        lP[k].pId_clasificacion = (int)cboClasificacion.SelectedValue;
+
+
+                        lP[k].editar(lP[k]);
+                        habilitarCampos(false);
+
+                    }
+                    else
+                        MessageBox.Show("Seleccione un item a editar", "Item");
+                }
+                lP.Clear();
+                cargarLista(lstPeliculas, "PELICULAS");
+            }
+        }
+
+        private bool validarCampos()
+        {
+            if (string.IsNullOrEmpty(txtTitulo.Text))
+            {
+                MessageBox.Show("Debe ingresar un titulo", "Completar");
+                txtTitulo.Focus();
+                return false;
+            }
+            if (cboGenero.SelectedIndex == -1)
+            {
+                MessageBox.Show("Debe ingresar un genero", "Completar");
+                cboGenero.Focus();
+                return false;
+            }
+            if (string.IsNullOrEmpty(txtNacionalidad.Text))
+            {
+                MessageBox.Show("Debe ingresar una nacionalidad", "Completar");
+                txtTitulo.Focus();
+                return false;
+            }
+            if (cboIdiomas.SelectedIndex == -1)
+            {
+                MessageBox.Show("Debe ingresar un idioma", "Completar");
+                cboIdiomas.Focus();
+                return false;
+            }
+            if (cboClasificacion.SelectedIndex == -1)
+            {
+                MessageBox.Show("Debe ingresar una clasificacion", "Completar");
+                cboClasificacion.Focus();
+                return false;
+            }
+            return true;
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
