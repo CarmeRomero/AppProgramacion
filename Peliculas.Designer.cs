@@ -59,6 +59,7 @@
             this.btnBorrar.TabIndex = 7;
             this.btnBorrar.Text = "Borrar Pelicula";
             this.btnBorrar.UseVisualStyleBackColor = true;
+            this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
             // 
             // btnCancelar
             // 

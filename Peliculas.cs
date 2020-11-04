@@ -84,7 +84,9 @@ namespace FormProgramacion
                     p.pId_idioma = cnn.pDr.GetInt32(4);
                 if (!cnn.pDr.IsDBNull(5))
                     p.pId_clasificacion = cnn.pDr.GetInt32(5);
-                lP.Add(p);
+                if(cnn.pDr.GetInt32(6)==0)
+                    lP.Add(p);
+
             }
             cnn.pDr.Close();
             cnn.desconectar();
@@ -282,6 +284,28 @@ namespace FormProgramacion
             txtNacionalidad.Text = lP[k].pNacionalidad;
             cboIdiomas.SelectedValue = lP[k].pId_idioma;
             cboClasificacion.SelectedValue = lP[k].pId_clasificacion;
+        }
+
+        private void btnBorrar_Click(object sender, EventArgs e)
+        {
+            int k = lstPeliculas.SelectedIndex;
+            if (lstPeliculas.SelectedIndex >= 0)
+            {
+                if (MessageBox.Show("Esta seguro que desea eliminar esta pelicula?", "Eliminar",
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Warning,
+                    MessageBoxDefaultButton.Button1) == DialogResult.Yes)
+                {
+                    lP[k].borrar(lP[k]);
+                    limpiar();
+                    lP.Clear();
+                    cargarLista(lstPeliculas, "PELICULAS");
+                }
+                    
+                
+            }
+            else
+                MessageBox.Show("Debe seleccionar una pelicula a eliminar", "Item", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            
         }
     }
 }
