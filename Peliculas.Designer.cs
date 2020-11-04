@@ -44,6 +44,8 @@
             this.btnGrabar = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.txtNacionalidad = new System.Windows.Forms.TextBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnBorrar
@@ -53,7 +55,7 @@
             this.btnBorrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBorrar.Font = new System.Drawing.Font("Britannic Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBorrar.ForeColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.btnBorrar.Location = new System.Drawing.Point(285, 311);
+            this.btnBorrar.Location = new System.Drawing.Point(295, 336);
             this.btnBorrar.Name = "btnBorrar";
             this.btnBorrar.Size = new System.Drawing.Size(99, 48);
             this.btnBorrar.TabIndex = 7;
@@ -81,7 +83,7 @@
             this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditar.Font = new System.Drawing.Font("Britannic Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditar.ForeColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.btnEditar.Location = new System.Drawing.Point(167, 311);
+            this.btnEditar.Location = new System.Drawing.Point(177, 336);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(99, 48);
             this.btnEditar.TabIndex = 6;
@@ -96,7 +98,7 @@
             this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNuevo.Font = new System.Drawing.Font("Britannic Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNuevo.ForeColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.btnNuevo.Location = new System.Drawing.Point(49, 311);
+            this.btnNuevo.Location = new System.Drawing.Point(62, 336);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(99, 48);
             this.btnNuevo.TabIndex = 5;
@@ -109,16 +111,16 @@
             this.lstPeliculas.Font = new System.Drawing.Font("Palatino Linotype", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lstPeliculas.FormattingEnabled = true;
             this.lstPeliculas.ItemHeight = 21;
-            this.lstPeliculas.Location = new System.Drawing.Point(439, 25);
+            this.lstPeliculas.Location = new System.Drawing.Point(483, 26);
             this.lstPeliculas.Name = "lstPeliculas";
-            this.lstPeliculas.Size = new System.Drawing.Size(277, 319);
+            this.lstPeliculas.Size = new System.Drawing.Size(277, 403);
             this.lstPeliculas.TabIndex = 10;
             this.lstPeliculas.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // cboClasificacion
             // 
             this.cboClasificacion.FormattingEnabled = true;
-            this.cboClasificacion.Location = new System.Drawing.Point(115, 245);
+            this.cboClasificacion.Location = new System.Drawing.Point(154, 222);
             this.cboClasificacion.Name = "cboClasificacion";
             this.cboClasificacion.Size = new System.Drawing.Size(121, 21);
             this.cboClasificacion.TabIndex = 4;
@@ -128,7 +130,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label5.Location = new System.Drawing.Point(14, 249);
+            this.label5.Location = new System.Drawing.Point(36, 223);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(79, 13);
             this.label5.TabIndex = 15;
@@ -137,7 +139,7 @@
             // cboIdiomas
             // 
             this.cboIdiomas.FormattingEnabled = true;
-            this.cboIdiomas.Location = new System.Drawing.Point(115, 190);
+            this.cboIdiomas.Location = new System.Drawing.Point(154, 172);
             this.cboIdiomas.Name = "cboIdiomas";
             this.cboIdiomas.Size = new System.Drawing.Size(121, 21);
             this.cboIdiomas.TabIndex = 3;
@@ -147,7 +149,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label3.Location = new System.Drawing.Point(12, 140);
+            this.label3.Location = new System.Drawing.Point(36, 127);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(81, 13);
             this.label3.TabIndex = 13;
@@ -156,7 +158,7 @@
             // cboGenero
             // 
             this.cboGenero.FormattingEnabled = true;
-            this.cboGenero.Location = new System.Drawing.Point(115, 81);
+            this.cboGenero.Location = new System.Drawing.Point(154, 73);
             this.cboGenero.Name = "cboGenero";
             this.cboGenero.Size = new System.Drawing.Size(121, 21);
             this.cboGenero.TabIndex = 1;
@@ -166,7 +168,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label2.Location = new System.Drawing.Point(45, 85);
+            this.label2.Location = new System.Drawing.Point(36, 79);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(48, 13);
             this.label2.TabIndex = 12;
@@ -177,7 +179,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label1.Location = new System.Drawing.Point(54, 29);
+            this.label1.Location = new System.Drawing.Point(36, 31);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(39, 13);
             this.label1.TabIndex = 11;
@@ -185,7 +187,7 @@
             // 
             // txtTitulo
             // 
-            this.txtTitulo.Location = new System.Drawing.Point(115, 25);
+            this.txtTitulo.Location = new System.Drawing.Point(154, 24);
             this.txtTitulo.Name = "txtTitulo";
             this.txtTitulo.Size = new System.Drawing.Size(248, 20);
             this.txtTitulo.TabIndex = 0;
@@ -197,7 +199,7 @@
             this.btnGrabar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGrabar.Font = new System.Drawing.Font("Britannic Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGrabar.ForeColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.btnGrabar.Location = new System.Drawing.Point(230, 390);
+            this.btnGrabar.Location = new System.Drawing.Point(249, 390);
             this.btnGrabar.Name = "btnGrabar";
             this.btnGrabar.Size = new System.Drawing.Size(99, 48);
             this.btnGrabar.TabIndex = 9;
@@ -210,7 +212,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label4.Location = new System.Drawing.Point(49, 194);
+            this.label4.Location = new System.Drawing.Point(36, 175);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(44, 13);
             this.label4.TabIndex = 14;
@@ -218,10 +220,30 @@
             // 
             // txtNacionalidad
             // 
-            this.txtNacionalidad.Location = new System.Drawing.Point(115, 136);
+            this.txtNacionalidad.Location = new System.Drawing.Point(154, 123);
             this.txtNacionalidad.Name = "txtNacionalidad";
             this.txtNacionalidad.Size = new System.Drawing.Size(121, 20);
             this.txtNacionalidad.TabIndex = 2;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.txtNacionalidad);
+            this.groupBox1.Controls.Add(this.cboClasificacion);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.cboIdiomas);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.cboGenero);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.txtTitulo);
+            this.groupBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.groupBox1.Location = new System.Drawing.Point(23, 26);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(411, 268);
+            this.groupBox1.TabIndex = 16;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Película";
             // 
             // Peliculas
             // 
@@ -229,27 +251,20 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.txtNacionalidad);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnBorrar);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnGrabar);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.lstPeliculas);
-            this.Controls.Add(this.cboClasificacion);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.cboIdiomas);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.cboGenero);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtTitulo);
+            this.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Name = "Peliculas";
             this.Text = "Peliculas";
             this.Load += new System.EventHandler(this.Peliculas_Load);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -271,5 +286,6 @@
         private System.Windows.Forms.Button btnGrabar;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtNacionalidad;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

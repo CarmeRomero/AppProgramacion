@@ -72,7 +72,7 @@ namespace FormProgramacion
             string sentenciaSQL = "";
             cnn.conectar();
             sentenciaSQL = "DELETE FROM PELICULAS " +
-                    "WHERE codigo = " + codigo;
+                    "WHERE id_pelicula = " + codigo;
             cnn.pCmd.CommandText = sentenciaSQL;
             cnn.pCmd.ExecuteNonQuery();
             cnn.desconectar();
