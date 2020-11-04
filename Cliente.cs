@@ -35,16 +35,16 @@ namespace FormProgramacion
         public void nuevo(Cliente cli)
         {
             cnn.conectar();
-            cnn.pCmd.CommandText = "INSERT INTO CLIENTES(nombre,apellido,fecha_nac,id_tipo_doc,nro_documento,id_sexo,calle,altura,d_barrio) " +
+            cnn.pCmd.CommandText = "INSERT INTO CLIENTES(nombre,apellido,fecha_nac,calle,altura,nro_documento,id_tipo_doc,id_sexo,d_barrio) " +
                 "VALUES(@param1, @param2, @param3, @param4, @param5,@param6,@param7,@param8,@param9)";
             cnn.pCmd.Parameters.AddWithValue("@param1", cli.pNombre);
             cnn.pCmd.Parameters.AddWithValue("@param2", cli.pApellido);
-            cnn.pCmd.Parameters.AddWithValue("@param3", cli.fecha_nac);
-            cnn.pCmd.Parameters.AddWithValue("@param4", cli.id_tipo_doc);
-            cnn.pCmd.Parameters.AddWithValue("@param5", cli.nro_documento);
-            cnn.pCmd.Parameters.AddWithValue("@param6", cli.pId_sexo);
-            cnn.pCmd.Parameters.AddWithValue("@param7", cli.pCalle);
-            cnn.pCmd.Parameters.AddWithValue("@param8", cli.pAltura);
+            cnn.pCmd.Parameters.AddWithValue("@param3", cli.pFecha_nac);
+            cnn.pCmd.Parameters.AddWithValue("@param4", cli.pCalle);
+            cnn.pCmd.Parameters.AddWithValue("@param5", cli.pAltura);
+            cnn.pCmd.Parameters.AddWithValue("@param6", cli.pNro_documento);
+            cnn.pCmd.Parameters.AddWithValue("@param7", cli.pId_tipo_doc);
+            cnn.pCmd.Parameters.AddWithValue("@param8", cli.pId_sexo);
             cnn.pCmd.Parameters.AddWithValue("@param9", cli.pD_barrio);
             cnn.pCmd.ExecuteNonQuery();
             cnn.desconectar();
@@ -53,26 +53,26 @@ namespace FormProgramacion
         public void editar(Cliente cli)
         {
             string sentenciaSQL = "UPDATE CLIENTES SET " +
-                            "nombre = @param1," +
-                            "apellido = @param2," +
-                            "fecha_nac = @param3, " +
-                            "id_tipo_doc = @param4, " +
-                            "nro_documento = @param5 " +
-                            "id_sexo = @param6 " +
-                            "calle = @param7 " +
-                            "altura = @param8 " +
-                            "d_barrio = @param9 " +
-                            "WHERE id_cliente = @pk";
+                            " nombre = @param1," +
+                            " apellido = @param2," +
+                            " fecha_nac = @param3, " +
+                            " calle = @param4, " +
+                            " altura = @param5, " +
+                            " nro_documento = @param6, " +
+                            " id_tipo_doc = @param7, " +
+                            " id_sexo = @param8, " +
+                            " d_barrio = @param9 " +
+                            " WHERE Id_cliente = @pk";
             cnn.conectar();
             cnn.pCmd.CommandText = sentenciaSQL;
             cnn.pCmd.Parameters.AddWithValue("@param1", cli.pNombre);
             cnn.pCmd.Parameters.AddWithValue("@param2", cli.pApellido);
             cnn.pCmd.Parameters.AddWithValue("@param3", cli.fecha_nac);
-            cnn.pCmd.Parameters.AddWithValue("@param4", cli.id_tipo_doc);
-            cnn.pCmd.Parameters.AddWithValue("@param5", cli.nro_documento);
-            cnn.pCmd.Parameters.AddWithValue("@param6", cli.pId_sexo);
-            cnn.pCmd.Parameters.AddWithValue("@param7", cli.pCalle);
-            cnn.pCmd.Parameters.AddWithValue("@param8", cli.pAltura);
+            cnn.pCmd.Parameters.AddWithValue("@param4", cli.pCalle);
+            cnn.pCmd.Parameters.AddWithValue("@param5", cli.pAltura);
+            cnn.pCmd.Parameters.AddWithValue("@param6", cli.pNro_documento);
+            cnn.pCmd.Parameters.AddWithValue("@param7", cli.pId_tipo_doc);
+            cnn.pCmd.Parameters.AddWithValue("@param8", cli.pId_sexo);
             cnn.pCmd.Parameters.AddWithValue("@param9", cli.pD_barrio);
             
             cnn.pCmd.Parameters.AddWithValue("@pk", cli.id_cliente);
@@ -95,10 +95,19 @@ namespace FormProgramacion
         int sex;
         public string SexoDelCliente()
         {
-            if (sex == 1)
+            if (id_sexo == 1)
                 return "Femenino";
             else
                 return "Masculino";
         }
+
+        public override string ToString()
+        {
+            string txt = "";
+            txt = id_cliente +"  " +apellido + " , " + nombre;
+            return txt;
+        }
+
+
     }
 }

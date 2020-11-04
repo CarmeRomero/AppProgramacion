@@ -55,6 +55,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtNombreCliente = new System.Windows.Forms.TextBox();
             this.cboBarrioCliente = new System.Windows.Forms.ComboBox();
+            this.rbtSinEspecificar = new System.Windows.Forms.RadioButton();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -72,6 +73,7 @@
             this.btnBorrarCliente.TabIndex = 30;
             this.btnBorrarCliente.Text = "Borrar cliente";
             this.btnBorrarCliente.UseVisualStyleBackColor = true;
+            this.btnBorrarCliente.Click += new System.EventHandler(this.btnBorrarCliente_Click);
             // 
             // btnCancelar
             // 
@@ -85,6 +87,7 @@
             this.btnCancelar.TabIndex = 31;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnGrabar
             // 
@@ -99,6 +102,7 @@
             this.btnGrabar.TabIndex = 32;
             this.btnGrabar.Text = "Guardar Cambios";
             this.btnGrabar.UseVisualStyleBackColor = true;
+            this.btnGrabar.Click += new System.EventHandler(this.btnGrabar_Click);
             // 
             // btnEditarCliente
             // 
@@ -113,6 +117,7 @@
             this.btnEditarCliente.TabIndex = 33;
             this.btnEditarCliente.Text = "Editar cliente";
             this.btnEditarCliente.UseVisualStyleBackColor = true;
+            this.btnEditarCliente.Click += new System.EventHandler(this.btnEditarCliente_Click);
             // 
             // btnNuevoCliente
             // 
@@ -127,6 +132,7 @@
             this.btnNuevoCliente.TabIndex = 34;
             this.btnNuevoCliente.Text = "Nuevo cliente";
             this.btnNuevoCliente.UseVisualStyleBackColor = true;
+            this.btnNuevoCliente.Click += new System.EventHandler(this.btnNuevoCliente_Click);
             // 
             // lstClientes
             // 
@@ -135,6 +141,7 @@
             this.lstClientes.Name = "lstClientes";
             this.lstClientes.Size = new System.Drawing.Size(220, 264);
             this.lstClientes.TabIndex = 29;
+            this.lstClientes.SelectedIndexChanged += new System.EventHandler(this.lstClientes_SelectedIndexChanged);
             // 
             // groupBox2
             // 
@@ -199,6 +206,7 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.rbtFemCliente);
+            this.groupBox1.Controls.Add(this.rbtSinEspecificar);
             this.groupBox1.Controls.Add(this.rbtMasculinoCliente);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label2);
@@ -214,7 +222,7 @@
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.groupBox1.Location = new System.Drawing.Point(19, 17);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(391, 260);
+            this.groupBox1.Size = new System.Drawing.Size(391, 290);
             this.groupBox1.TabIndex = 27;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos personales";
@@ -222,8 +230,9 @@
             // rbtFemCliente
             // 
             this.rbtFemCliente.AutoSize = true;
+            this.rbtFemCliente.Checked = true;
             this.rbtFemCliente.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.rbtFemCliente.Location = new System.Drawing.Point(173, 219);
+            this.rbtFemCliente.Location = new System.Drawing.Point(178, 219);
             this.rbtFemCliente.Name = "rbtFemCliente";
             this.rbtFemCliente.Size = new System.Drawing.Size(71, 17);
             this.rbtFemCliente.TabIndex = 5;
@@ -235,7 +244,7 @@
             // 
             this.rbtMasculinoCliente.AutoSize = true;
             this.rbtMasculinoCliente.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.rbtMasculinoCliente.Location = new System.Drawing.Point(266, 219);
+            this.rbtMasculinoCliente.Location = new System.Drawing.Point(255, 219);
             this.rbtMasculinoCliente.Name = "rbtMasculinoCliente";
             this.rbtMasculinoCliente.Size = new System.Drawing.Size(73, 17);
             this.rbtMasculinoCliente.TabIndex = 5;
@@ -277,7 +286,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label8.Location = new System.Drawing.Point(109, 221);
+            this.label8.Location = new System.Drawing.Point(109, 242);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(31, 13);
             this.label8.TabIndex = 4;
@@ -347,6 +356,18 @@
             this.cboBarrioCliente.Size = new System.Drawing.Size(163, 21);
             this.cboBarrioCliente.TabIndex = 3;
             // 
+            // rbtSinEspecificar
+            // 
+            this.rbtSinEspecificar.AutoSize = true;
+            this.rbtSinEspecificar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.rbtSinEspecificar.Location = new System.Drawing.Point(208, 242);
+            this.rbtSinEspecificar.Name = "rbtSinEspecificar";
+            this.rbtSinEspecificar.Size = new System.Drawing.Size(94, 17);
+            this.rbtSinEspecificar.TabIndex = 5;
+            this.rbtSinEspecificar.TabStop = true;
+            this.rbtSinEspecificar.Text = "Sin especificar";
+            this.rbtSinEspecificar.UseVisualStyleBackColor = true;
+            // 
             // Clientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -400,5 +421,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtNombreCliente;
         private System.Windows.Forms.ComboBox cboBarrioCliente;
+        private System.Windows.Forms.RadioButton rbtSinEspecificar;
     }
 }

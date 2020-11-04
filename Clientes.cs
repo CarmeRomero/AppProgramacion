@@ -93,15 +93,15 @@ namespace FormProgramacion
                 if (!cnn.pDr.IsDBNull(3))
                     cli.pFecha_nac = cnn.pDr.GetDateTime(3);
                 if (!cnn.pDr.IsDBNull(4))
-                    cli.pId_tipo_doc = cnn.pDr.GetInt32(4);
+                    cli.pCalle = cnn.pDr.GetString(4);
                 if (!cnn.pDr.IsDBNull(5))
-                    cli.pNro_documento = cnn.pDr.GetInt32(5);
+                    cli.pAltura = cnn.pDr.GetInt32(5);
                 if (!cnn.pDr.IsDBNull(6))
-                    cli.pId_sexo = cnn.pDr.GetInt32(6);
+                    cli.pNro_documento = cnn.pDr.GetInt32(6);
                 if (!cnn.pDr.IsDBNull(7))
-                    cli.pCalle = cnn.pDr.GetString(7);
+                    cli.pId_tipo_doc = cnn.pDr.GetInt32(7);
                 if (!cnn.pDr.IsDBNull(8))
-                    cli.pAltura = cnn.pDr.GetInt32(8);
+                    cli.pId_sexo = cnn.pDr.GetInt32(8);
                 if (!cnn.pDr.IsDBNull(9))
                     cli.pD_barrio = cnn.pDr.GetInt32(9);
 
@@ -112,7 +112,7 @@ namespace FormProgramacion
             cnn.pDr.Close();
             cnn.desconectar();
 
-            //lstClientes.Items.Clear();
+            lstClientes.Items.Clear();
             for (int i = 0; i < lP.Count; i++)
             {
                 lstClientes.Items.Add(lP[i].ToString());
@@ -126,31 +126,213 @@ namespace FormProgramacion
             habilitarCampos(false);
             cargarCombos(cboBarrioCliente, "BARRIOS");
             cargarCombos(cboTipoDocCliente, "TIPOS_DOCUMENTO");
-            
+            cargarLista(lstClientes, " CLIENTES");
             limpiar();
         }
 
-        // VER SI SIRVE EL AUTOCOMPLETADO CON ALGUN CAMPO
+        private void btnNuevoCliente_Click(object sender, EventArgs e)
+        {
+            miAccion = accion.nuevo;
+            habilitarCampos(true);
+            limpiar();
+            txtNombreCliente.Focus();
+        }
 
-        //void autoCompleteText(string nombreTabla, TextBox txtbx)
-        //{
-        //    txtbx.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-        //    txtbx.AutoCompleteSource = AutoCompleteSource.CustomSource;
-        //    AutoCompleteStringCollection coll = new AutoCompleteStringCollection();
+        private void btnEditarCliente_Click(object sender, EventArgs e)
+        {
 
-        //    cnn.leerTabla(nombreTabla);
-        //    while (cnn.pDr.Read())
-        //    {
-        //        string descripcion = cnn.pDr.GetString(1);
-        //        coll.Add(descripcion);
-        //    }
-        //    cnn.pDr.Close();
-        //    cnn.desconectar();
-        //    txtbx.AutoCompleteCustomSource = coll;
-        //}
+            if (lstClientes.SelectedIndex >= 0)
+            {
+                miAccion = accion.editado;
+                habilitarCampos(true);
+                txtNombreCliente.Focus();
+            }
+            else
+                MessageBox.Show("Debe seleccionar un cliente de la lista", "Seleccionar");
+        }
+
+        private void btnBorrarCliente_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            habilitarCampos(false);
+            limpiar();
+            txtNombreCliente.Focus();
+        }
+
+        private void btnGrabar_Click(object sender, EventArgs e)
+        {
+            if (validarCampos())
+            {
+                Cliente cli = new Cliente();
+                cli.pNombre = txtNombreCliente.Text;
+                cli.pApellido = txtApellidoCliente.Text;
+                cli.pFecha_nac = dtpFechaNacCliente.Value;
+
+                cli.pId_tipo_doc = (int)cboTipoDocCliente.SelectedValue;
+                cli.pNro_documento = Convert.ToInt32(txtDNICliente.Text);
+                if (rbtFemCliente.Checked)
+                    cli.pId_sexo = 1;
+                if (rbtMasculinoCliente.Checked)
+                    cli.pId_sexo = 2;
+                if (rbtSinEspecificar.Checked)
+                    cli.pId_sexo = 3;
+
+                cli.pCalle = txtCalleCliente.Text;
+                cli.pAltura = Convert.ToInt32(txtAlturaCliente.Text);
+                cli.pD_barrio = (int)cboBarrioCliente.SelectedValue;
+
+
+                if (miAccion == accion.nuevo)
+                {
+                    cli.nuevo(cli);
+                    habilitarCampos(false);
+                }
+                else
+                {
+                    if (lstClientes.SelectedIndex >= 0)
+                    {
+
+
+                        int k = lstClientes.SelectedIndex;
+
+                        lP[k].pNombre = txtNombreCliente.Text;
+                        lP[k].pApellido = txtApellidoCliente.Text;
+                        lP[k].pFecha_nac = dtpFechaNacCliente.Value;
+
+                        lP[k].pId_tipo_doc = (int)cboTipoDocCliente.SelectedValue;
+                        lP[k].pNro_documento = Convert.ToInt32(txtDNICliente.Text);
+                        if (rbtFemCliente.Checked)
+                            lP[k].pId_sexo = 1;
+                        if (rbtMasculinoCliente.Checked)
+                            lP[k].pId_sexo = 2;
+                        if (rbtSinEspecificar.Checked)
+                            lP[k].pId_sexo = 3;
+
+                        lP[k].pCalle = txtCalleCliente.Text;
+                        lP[k].pAltura = Convert.ToInt32(txtAlturaCliente.Text);
+                        lP[k].pD_barrio = (int)cboBarrioCliente.SelectedValue;
 
 
 
+
+                        lP[k].editar(lP[k]);
+                        habilitarCampos(false);
+
+                    }
+                    else
+                        MessageBox.Show("Seleccione un item a editar", "Item");
+                }
+                lP.Clear();
+                cargarLista(lstClientes, "CLIENTES");
+            }
+
+        
+
+
+            // VER SI SIRVE EL AUTOCOMPLETADO CON ALGUN CAMPO
+
+            //void autoCompleteText(string nombreTabla, TextBox txtbx)
+            //{
+            //    txtbx.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            //    txtbx.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            //    AutoCompleteStringCollection coll = new AutoCompleteStringCollection();
+
+            //    cnn.leerTabla(nombreTabla);
+            //    while (cnn.pDr.Read())
+            //    {
+            //        string descripcion = cnn.pDr.GetString(1);
+            //        coll.Add(descripcion);
+            //    }
+            //    cnn.pDr.Close();
+            //    cnn.desconectar();
+            //    txtbx.AutoCompleteCustomSource = coll;
+            //}
+
+
+
+        }
+
+        private bool validarCampos()
+        {
+            if (string.IsNullOrEmpty(txtNombreCliente.Text))
+            {
+                MessageBox.Show("Debe ingresar un nombre", "Completar");
+                txtNombreCliente.Focus();
+                return false;
+            }
+            if (string.IsNullOrEmpty(txtApellidoCliente.Text))
+            {
+                MessageBox.Show("Debe ingresar un apellido", "Completar");
+                txtApellidoCliente.Focus();
+                return false;
+            }
+
+            if (cboTipoDocCliente.SelectedIndex == -1)
+            {
+                MessageBox.Show("Debe ingresar un tipo de documento", "Completar");
+                cboTipoDocCliente.Focus();
+                return false;
+            }
+            if (string.IsNullOrEmpty(txtDNICliente.Text))
+            {
+                MessageBox.Show("Debe ingresar un número de documento", "Completar");
+                txtDNICliente.Focus();
+                return false;
+            }
+            if (string.IsNullOrEmpty(txtCalleCliente.Text))
+            {
+                MessageBox.Show("Debe ingresar una calle", "Completar");
+                txtCalleCliente.Focus();
+                return false;
+            }
+            if (string.IsNullOrEmpty(txtAlturaCliente.Text))
+            {
+                MessageBox.Show("Debe ingresar una altura para su dirección", "Completar");
+                txtAlturaCliente.Focus();
+                return false;
+            }
+            if (cboBarrioCliente.SelectedIndex == -1)
+            {
+                MessageBox.Show("Debe ingresar un barrio", "Completar");
+                cboBarrioCliente.Focus();
+                return false;
+            }
+
+
+
+            return true;
+
+        }
+
+        private void lstClientes_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cargarCampos(lstClientes.SelectedIndex);
+        }
+
+        private void cargarCampos(int selectedIndex)
+        {
+            int k = lstClientes.SelectedIndex;
+            txtNombreCliente.Text = lP[k].pNombre;
+            txtApellidoCliente.Text = lP[k].pApellido;
+            dtpFechaNacCliente.Value = lP[k].pFecha_nac;
+            cboTipoDocCliente.SelectedValue = lP[k].pId_tipo_doc;
+            txtDNICliente.Text = lP[k].pNro_documento.ToString();
+            if (lP[k].pId_sexo == 1)
+                rbtFemCliente.Checked = true;
+            if (lP[k].pId_sexo == 2)
+                rbtMasculinoCliente.Checked = true;
+            if (lP[k].pId_sexo == 3)
+                rbtSinEspecificar.Checked = true;
+
+            txtCalleCliente.Text = lP[k].pCalle;
+            txtAlturaCliente.Text = lP[k].pAltura.ToString() ;
+            cboBarrioCliente.SelectedValue = lP[k].pD_barrio;
+
+        }
 
 
     }
