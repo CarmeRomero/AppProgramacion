@@ -76,7 +76,7 @@ namespace FormProgramacion
             cnn.conectar();
             
             sentenciaSQL = "DELETE FROM PELICULAS " +
-                    "WHERE id_pelicula = " + codigo;
+                    "WHERE id_pelicula = " + id_pelicula;
             cnn.pCmd.CommandText = sentenciaSQL;
             cnn.pCmd.Parameters.AddWithValue("@param1", 1);
             cnn.pCmd.Parameters.AddWithValue("@pk", p.pId_pelicula);
