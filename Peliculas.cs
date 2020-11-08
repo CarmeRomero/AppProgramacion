@@ -14,6 +14,7 @@ namespace FormProgramacion
     {
         CNN cnn = new CNN();
         List<Pelicula> lP = new List<Pelicula>();
+        frmMessageBox FMB = new frmMessageBox();
         enum accion
         {
             nuevo,
@@ -118,7 +119,8 @@ namespace FormProgramacion
             cargarCombos(cboGenero, "GENEROS");
             cargarCombos(cboIdiomas, "IDIOMAS");
             cargarLista(lstPeliculas, "peliculas");
-            limpiar();
+            
+  
 
         }
         void autoCompleteText(string nombreTabla, TextBox txtbx)
@@ -139,32 +141,35 @@ namespace FormProgramacion
         }
         private void btnNuevo_Click_1(object sender, EventArgs e)
         {
-            miAccion = accion.nuevo;
+            txtMenu.Text = "Nueva Pelicula";
+            
             habilitarCampos(true);
             limpiar();
             txtTitulo.Focus();
+            miAccion = accion.nuevo;
 
         }
 
         private void btnEditar_Click_1(object sender, EventArgs e)
         {
-            if (lstPeliculas.SelectedIndex >= 0 || !string.IsNullOrEmpty(txtTitulo.Text))
+            if (lstPeliculas.SelectedIndex >= 0)
             {
+                txtMenu.Text = "Modo Edición";
                 miAccion = accion.editado;
                 habilitarCampos(true);
                 txtTitulo.Focus();
             }
             else
-                MessageBox.Show("Debe seleccionar una pelicula de la lista", "Seleccionar");
+                FMB.Show();
             
-
         }
 
         private void btnCancelar_Click_1(object sender, EventArgs e)
         {
             habilitarCampos(false);
-            cargarCampos(1);
+            
             txtTitulo.Focus();
+            txtMenu.Text = "";
         }
 
         private void btnGrabar_Click(object sender, EventArgs e)
@@ -186,7 +191,7 @@ namespace FormProgramacion
                 cnn.desconectar();
                 p.pId_idioma = (int)cboIdiomas.SelectedValue;
                 p.pId_clasificacion = (int)cboClasificacion.SelectedValue;
-                if(miAccion == accion.nuevo)
+                if (miAccion == accion.nuevo)
                 {
                     p.nuevo(p);
                     habilitarCampos(false);
@@ -210,18 +215,20 @@ namespace FormProgramacion
                         cnn.desconectar();
                         lP[k].pId_idioma = (int)cboClasificacion.SelectedValue;
                         lP[k].pId_clasificacion = (int)cboClasificacion.SelectedValue;
-
-
                         lP[k].editar(lP[k]);
                         habilitarCampos(false);
-
                     }
                     else
-                        MessageBox.Show("Seleccione un item a editar", "Item");
+                        FMB.Show();
+
                 }
                 lP.Clear();
                 cargarLista(lstPeliculas, "PELICULAS");
+                txtMenu.Text = "";
+                miAccion = accion.editado;
             }
+            
+            
         }
 
         private bool validarCampos()
@@ -243,7 +250,7 @@ namespace FormProgramacion
                 if (string.IsNullOrEmpty(txtNacionalidad.Text))
                 {
                     MessageBox.Show("Debe ingresar una nacionalidad", "Completar");
-                    txtTitulo.Focus();
+                    txtNacionalidad.Focus();
                     return false;
                 }
                 if (cboIdiomas.SelectedIndex == -1)
@@ -258,15 +265,7 @@ namespace FormProgramacion
                     cboClasificacion.Focus();
                     return false;
                 }
-                else
-                {
-                    if (lstPeliculas.SelectedIndex < 0 || string.IsNullOrEmpty(txtTitulo.Text))
-                    {
-                        MessageBox.Show("Debe seleccionar una pelicula de la lista", "Seleccionar");
-                        lstPeliculas.Enabled = true;
-                        lstPeliculas.SelectedIndex = 0;
-                    }
-                }
+               
             }
             return true;
         }

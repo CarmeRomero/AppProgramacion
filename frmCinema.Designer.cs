@@ -263,7 +263,7 @@
             this.iconButton1.Rotation = 0D;
             this.iconButton1.Size = new System.Drawing.Size(210, 55);
             this.iconButton1.TabIndex = 1;
-            this.iconButton1.Text = "Temporadas";
+            this.iconButton1.Text = "Clientes";
             this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton1.UseVisualStyleBackColor = true;

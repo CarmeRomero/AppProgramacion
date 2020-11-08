@@ -50,6 +50,12 @@
   <ItemGroup>
     <Compile Include="Cliente.cs" />
     <Compile Include="CNN.cs" />
+    <Compile Include="frmMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMessageBox.Designer.cs">
+      <DependentUpon>frmMessageBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pelicula.cs" />
     <Compile Include="Peliculas.cs">
       <SubType>Form</SubType>
@@ -107,6 +113,9 @@
     <Compile Include="Clientes.Designer.cs">
       <DependentUpon>Clientes.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="frmMessageBox.resx">
+      <DependentUpon>frmMessageBox.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Peliculas.resx">
       <DependentUpon>Peliculas.cs</DependentUpon>
     </EmbeddedResource>

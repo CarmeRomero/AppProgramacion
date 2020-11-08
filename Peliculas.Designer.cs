@@ -45,6 +45,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtNacionalidad = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtMenu = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,7 +59,7 @@
             this.btnBorrar.Location = new System.Drawing.Point(295, 336);
             this.btnBorrar.Name = "btnBorrar";
             this.btnBorrar.Size = new System.Drawing.Size(99, 48);
-            this.btnBorrar.TabIndex = 7;
+            this.btnBorrar.TabIndex = 3;
             this.btnBorrar.Text = "Borrar Pelicula";
             this.btnBorrar.UseVisualStyleBackColor = true;
             this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
@@ -72,7 +73,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(108, 396);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(99, 36);
-            this.btnCancelar.TabIndex = 8;
+            this.btnCancelar.TabIndex = 4;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click_1);
@@ -87,7 +88,7 @@
             this.btnEditar.Location = new System.Drawing.Point(177, 336);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(99, 48);
-            this.btnEditar.TabIndex = 6;
+            this.btnEditar.TabIndex = 2;
             this.btnEditar.Text = "Editar Pelicula";
             this.btnEditar.UseVisualStyleBackColor = true;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click_1);
@@ -102,7 +103,7 @@
             this.btnNuevo.Location = new System.Drawing.Point(62, 336);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(99, 48);
-            this.btnNuevo.TabIndex = 5;
+            this.btnNuevo.TabIndex = 1;
             this.btnNuevo.Text = "Nueva Pelicula";
             this.btnNuevo.UseVisualStyleBackColor = true;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click_1);
@@ -115,7 +116,7 @@
             this.lstPeliculas.Location = new System.Drawing.Point(483, 26);
             this.lstPeliculas.Name = "lstPeliculas";
             this.lstPeliculas.Size = new System.Drawing.Size(277, 403);
-            this.lstPeliculas.TabIndex = 10;
+            this.lstPeliculas.TabIndex = 6;
             this.lstPeliculas.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // cboClasificacion
@@ -134,7 +135,7 @@
             this.label5.Location = new System.Drawing.Point(36, 223);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(79, 13);
-            this.label5.TabIndex = 15;
+            this.label5.TabIndex = 9;
             this.label5.Text = "Clasificacion";
             // 
             // cboIdiomas
@@ -153,7 +154,7 @@
             this.label3.Location = new System.Drawing.Point(36, 127);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(81, 13);
-            this.label3.TabIndex = 13;
+            this.label3.TabIndex = 7;
             this.label3.Text = "Nacionalidad";
             // 
             // cboGenero
@@ -172,7 +173,7 @@
             this.label2.Location = new System.Drawing.Point(36, 79);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(48, 13);
-            this.label2.TabIndex = 12;
+            this.label2.TabIndex = 6;
             this.label2.Text = "Genero";
             // 
             // label1
@@ -183,7 +184,7 @@
             this.label1.Location = new System.Drawing.Point(36, 31);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(39, 13);
-            this.label1.TabIndex = 11;
+            this.label1.TabIndex = 5;
             this.label1.Text = "Titulo";
             // 
             // txtTitulo
@@ -203,7 +204,7 @@
             this.btnGrabar.Location = new System.Drawing.Point(249, 390);
             this.btnGrabar.Name = "btnGrabar";
             this.btnGrabar.Size = new System.Drawing.Size(99, 48);
-            this.btnGrabar.TabIndex = 9;
+            this.btnGrabar.TabIndex = 5;
             this.btnGrabar.Text = "Guardar Cambios";
             this.btnGrabar.UseVisualStyleBackColor = true;
             this.btnGrabar.Click += new System.EventHandler(this.btnGrabar_Click);
@@ -216,7 +217,7 @@
             this.label4.Location = new System.Drawing.Point(36, 175);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(44, 13);
-            this.label4.TabIndex = 14;
+            this.label4.TabIndex = 8;
             this.label4.Text = "Idioma";
             // 
             // txtNacionalidad
@@ -242,9 +243,19 @@
             this.groupBox1.Location = new System.Drawing.Point(23, 26);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(411, 268);
-            this.groupBox1.TabIndex = 16;
+            this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Película";
+            // 
+            // txtMenu
+            // 
+            this.txtMenu.AutoSize = true;
+            this.txtMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMenu.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.txtMenu.Location = new System.Drawing.Point(205, 308);
+            this.txtMenu.Name = "txtMenu";
+            this.txtMenu.Size = new System.Drawing.Size(0, 16);
+            this.txtMenu.TabIndex = 7;
             // 
             // Peliculas
             // 
@@ -252,6 +263,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtMenu);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnBorrar);
             this.Controls.Add(this.btnCancelar);
@@ -266,6 +278,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -288,5 +301,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtNacionalidad;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label txtMenu;
     }
 }

@@ -35,13 +35,14 @@ namespace FormProgramacion
         public void nuevo(Pelicula p)
         {
             cnn.conectar();
-            cnn.pCmd.CommandText = "INSERT INTO PELICULAS(titulo,Id_genero,Id_nacionalidad,Id_idioma,id_clasificacion) " +
-                "VALUES(@param1, @param2, @param3, @param4, @param5)";
+            cnn.pCmd.CommandText = "INSERT INTO PELICULAS(titulo,Id_genero,Id_nacionalidad,Id_idioma,id_clasificacion,Cancelada) " +
+                "VALUES(@param1, @param2, @param3, @param4, @param5,@param6)";
             cnn.pCmd.Parameters.AddWithValue("@param1", p.pTitulo);
             cnn.pCmd.Parameters.AddWithValue("@param2", p.pId_genero);
             cnn.pCmd.Parameters.AddWithValue("@param3", p.pId_nacionalidad);
             cnn.pCmd.Parameters.AddWithValue("@param4", p.pId_idioma);
             cnn.pCmd.Parameters.AddWithValue("@param5", p.pId_clasificacion);
+            cnn.pCmd.Parameters.AddWithValue("@param6", 0);
             cnn.pCmd.ExecuteNonQuery();
             cnn.desconectar();
             cnn.pCmd.Parameters.Clear();
@@ -75,8 +76,7 @@ namespace FormProgramacion
                             "WHERE Id_pelicula = @pk";
             cnn.conectar();
             
-            sentenciaSQL = "DELETE FROM PELICULAS " +
-                    "WHERE id_pelicula = " + id_pelicula;
+            
             cnn.pCmd.CommandText = sentenciaSQL;
             cnn.pCmd.Parameters.AddWithValue("@param1", 1);
             cnn.pCmd.Parameters.AddWithValue("@pk", p.pId_pelicula);
