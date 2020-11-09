@@ -56,6 +56,7 @@
             this.txtDNICliente = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtNombreCliente = new System.Windows.Forms.TextBox();
+            this.txtMenu = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -67,7 +68,7 @@
             this.btnBorrarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBorrarCliente.Font = new System.Drawing.Font("Britannic Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBorrarCliente.ForeColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.btnBorrarCliente.Location = new System.Drawing.Point(683, 319);
+            this.btnBorrarCliente.Location = new System.Drawing.Point(683, 327);
             this.btnBorrarCliente.Name = "btnBorrarCliente";
             this.btnBorrarCliente.Size = new System.Drawing.Size(99, 48);
             this.btnBorrarCliente.TabIndex = 30;
@@ -96,7 +97,7 @@
             this.btnGrabar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGrabar.Font = new System.Drawing.Font("Britannic Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGrabar.ForeColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.btnGrabar.Location = new System.Drawing.Point(630, 382);
+            this.btnGrabar.Location = new System.Drawing.Point(630, 388);
             this.btnGrabar.Name = "btnGrabar";
             this.btnGrabar.Size = new System.Drawing.Size(99, 48);
             this.btnGrabar.TabIndex = 32;
@@ -111,7 +112,7 @@
             this.btnEditarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditarCliente.Font = new System.Drawing.Font("Britannic Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditarCliente.ForeColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.btnEditarCliente.Location = new System.Drawing.Point(569, 319);
+            this.btnEditarCliente.Location = new System.Drawing.Point(569, 327);
             this.btnEditarCliente.Name = "btnEditarCliente";
             this.btnEditarCliente.Size = new System.Drawing.Size(99, 48);
             this.btnEditarCliente.TabIndex = 33;
@@ -126,7 +127,7 @@
             this.btnNuevoCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNuevoCliente.Font = new System.Drawing.Font("Britannic Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNuevoCliente.ForeColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.btnNuevoCliente.Location = new System.Drawing.Point(455, 319);
+            this.btnNuevoCliente.Location = new System.Drawing.Point(455, 327);
             this.btnNuevoCliente.Name = "btnNuevoCliente";
             this.btnNuevoCliente.Size = new System.Drawing.Size(99, 48);
             this.btnNuevoCliente.TabIndex = 34;
@@ -136,10 +137,14 @@
             // 
             // lstClientes
             // 
+            this.lstClientes.BackColor = System.Drawing.Color.SteelBlue;
+            this.lstClientes.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lstClientes.ForeColor = System.Drawing.Color.White;
             this.lstClientes.FormattingEnabled = true;
-            this.lstClientes.Location = new System.Drawing.Point(509, 20);
+            this.lstClientes.ItemHeight = 18;
+            this.lstClientes.Location = new System.Drawing.Point(455, 20);
             this.lstClientes.Name = "lstClientes";
-            this.lstClientes.Size = new System.Drawing.Size(220, 264);
+            this.lstClientes.Size = new System.Drawing.Size(312, 256);
             this.lstClientes.TabIndex = 29;
             this.lstClientes.SelectedIndexChanged += new System.EventHandler(this.lstClientes_SelectedIndexChanged);
             // 
@@ -193,22 +198,24 @@
             // 
             this.txtCalleCliente.Location = new System.Drawing.Point(171, 27);
             this.txtCalleCliente.Name = "txtCalleCliente";
-            this.txtCalleCliente.Size = new System.Drawing.Size(163, 20);
+            this.txtCalleCliente.Size = new System.Drawing.Size(84, 20);
             this.txtCalleCliente.TabIndex = 1;
             // 
             // txtAlturaCliente
             // 
             this.txtAlturaCliente.Location = new System.Drawing.Point(171, 57);
+            this.txtAlturaCliente.MaxLength = 6;
             this.txtAlturaCliente.Name = "txtAlturaCliente";
-            this.txtAlturaCliente.Size = new System.Drawing.Size(163, 20);
+            this.txtAlturaCliente.Size = new System.Drawing.Size(68, 20);
             this.txtAlturaCliente.TabIndex = 1;
+            this.txtAlturaCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAlturaCliente_KeyPress);
             // 
             // cboBarrioCliente
             // 
             this.cboBarrioCliente.FormattingEnabled = true;
             this.cboBarrioCliente.Location = new System.Drawing.Point(171, 87);
             this.cboBarrioCliente.Name = "cboBarrioCliente";
-            this.cboBarrioCliente.Size = new System.Drawing.Size(163, 21);
+            this.cboBarrioCliente.Size = new System.Drawing.Size(129, 21);
             this.cboBarrioCliente.TabIndex = 3;
             // 
             // groupBox1
@@ -307,7 +314,7 @@
             this.cboTipoDocCliente.FormattingEnabled = true;
             this.cboTipoDocCliente.Location = new System.Drawing.Point(176, 139);
             this.cboTipoDocCliente.Name = "cboTipoDocCliente";
-            this.cboTipoDocCliente.Size = new System.Drawing.Size(160, 21);
+            this.cboTipoDocCliente.Size = new System.Drawing.Size(116, 21);
             this.cboTipoDocCliente.TabIndex = 3;
             // 
             // label8
@@ -324,7 +331,7 @@
             // 
             this.dtpFechaNacCliente.Location = new System.Drawing.Point(175, 102);
             this.dtpFechaNacCliente.Name = "dtpFechaNacCliente";
-            this.dtpFechaNacCliente.Size = new System.Drawing.Size(161, 20);
+            this.dtpFechaNacCliente.Size = new System.Drawing.Size(135, 20);
             this.dtpFechaNacCliente.TabIndex = 2;
             // 
             // label6
@@ -348,8 +355,9 @@
             // 
             this.txtDNICliente.Location = new System.Drawing.Point(175, 179);
             this.txtDNICliente.Name = "txtDNICliente";
-            this.txtDNICliente.Size = new System.Drawing.Size(161, 20);
+            this.txtDNICliente.Size = new System.Drawing.Size(107, 20);
             this.txtDNICliente.TabIndex = 1;
+            this.txtDNICliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDNICliente_KeyPress);
             // 
             // label3
             // 
@@ -368,12 +376,23 @@
             this.txtNombreCliente.Size = new System.Drawing.Size(163, 20);
             this.txtNombreCliente.TabIndex = 1;
             // 
+            // txtMenu
+            // 
+            this.txtMenu.AutoSize = true;
+            this.txtMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMenu.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.txtMenu.Location = new System.Drawing.Point(552, 300);
+            this.txtMenu.Name = "txtMenu";
+            this.txtMenu.Size = new System.Drawing.Size(0, 16);
+            this.txtMenu.TabIndex = 35;
+            // 
             // Clientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.ClientSize = new System.Drawing.Size(800, 449);
+            this.Controls.Add(this.txtMenu);
             this.Controls.Add(this.btnBorrarCliente);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnGrabar);
@@ -390,6 +409,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -422,5 +442,6 @@
         private System.Windows.Forms.TextBox txtNombreCliente;
         private System.Windows.Forms.ComboBox cboBarrioCliente;
         private System.Windows.Forms.RadioButton rbtSinEspecificar;
+        private System.Windows.Forms.Label txtMenu;
     }
 }
