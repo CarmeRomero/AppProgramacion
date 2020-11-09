@@ -48,6 +48,7 @@ namespace FormProgramacion
             btnNuevoCliente.Enabled = !x;
             btnEditarCliente.Enabled = !x;
             btnBorrarCliente.Enabled = !x;
+            lstClientes.Enabled = !x;
 
 
         }
@@ -61,8 +62,6 @@ namespace FormProgramacion
 
             cboTipoDocCliente.SelectedIndex = -1;
             cboBarrioCliente.SelectedIndex = -1;
-
-
         }
 
         public void cargarCombos(ComboBox combo, string nombreTabla)
@@ -134,6 +133,7 @@ namespace FormProgramacion
 
         private void btnNuevoCliente_Click(object sender, EventArgs e)
         {
+            txtMenu.Text = "Nuevo Cliente";
             miAccion = accion.nuevo;
             habilitarCampos(true);
             limpiar();
@@ -145,6 +145,7 @@ namespace FormProgramacion
 
             if (lstClientes.SelectedIndex >= 0)
             {
+                txtMenu.Text = "Modo edición";
                 miAccion = accion.editado;
                 habilitarCampos(true);
                 txtNombreCliente.Focus();
@@ -176,6 +177,7 @@ namespace FormProgramacion
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
+            txtMenu.Text = "";
             habilitarCampos(false);
             limpiar();
             txtNombreCliente.Focus();
@@ -208,6 +210,7 @@ namespace FormProgramacion
                 {
                     cli.nuevo(cli);
                     habilitarCampos(false);
+                    txtMenu.Text = "";
                 }
                 else
                 {
@@ -239,6 +242,7 @@ namespace FormProgramacion
 
                         lP[k].editar(lP[k]);
                         habilitarCampos(false);
+                        txtMenu.Text = "";
 
                     }
                     else
@@ -337,6 +341,26 @@ namespace FormProgramacion
         private void label10_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtAlturaCliente_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Char chr = e.KeyChar;
+            if(!Char.IsDigit(chr) && chr != 8)
+            {
+                e.Handled = true;
+                MessageBox.Show("Ingrese una altura valida","Altura", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void txtDNICliente_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Char chr = e.KeyChar;
+            if (!Char.IsDigit(chr) && chr != 8)
+            {
+                e.Handled = true;
+                MessageBox.Show("Ingrese un documento valido", "Altura", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 

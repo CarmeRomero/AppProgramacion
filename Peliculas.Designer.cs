@@ -110,12 +110,14 @@
             // 
             // lstPeliculas
             // 
-            this.lstPeliculas.Font = new System.Drawing.Font("Palatino Linotype", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lstPeliculas.BackColor = System.Drawing.Color.SteelBlue;
+            this.lstPeliculas.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lstPeliculas.ForeColor = System.Drawing.Color.White;
             this.lstPeliculas.FormattingEnabled = true;
-            this.lstPeliculas.ItemHeight = 21;
+            this.lstPeliculas.ItemHeight = 18;
             this.lstPeliculas.Location = new System.Drawing.Point(483, 26);
             this.lstPeliculas.Name = "lstPeliculas";
-            this.lstPeliculas.Size = new System.Drawing.Size(277, 403);
+            this.lstPeliculas.Size = new System.Drawing.Size(277, 400);
             this.lstPeliculas.TabIndex = 6;
             this.lstPeliculas.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
