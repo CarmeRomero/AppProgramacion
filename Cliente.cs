@@ -19,6 +19,7 @@ namespace FormProgramacion
         int id_tipo_doc;
         int id_sexo;
         int d_barrio;
+        string sexo;
 
         public int pId_cliente { get => id_cliente; set => id_cliente = value; }
         public string pNombre { get => nombre; set => nombre = value; }
@@ -30,13 +31,13 @@ namespace FormProgramacion
         public int pId_tipo_doc { get => id_tipo_doc; set => id_tipo_doc = value; }
         public int pId_sexo { get => id_sexo; set => id_sexo = value; }
         public int pD_barrio { get => d_barrio; set => d_barrio = value; }
-
+        public string pSexo { get => sexo; set => sexo = value; }
 
         public void nuevo(Cliente cli)
         {
             cnn.conectar();
-            cnn.pCmd.CommandText = "INSERT INTO CLIENTES(nombre,apellido,fecha_nac,calle,altura,nro_documento,id_tipo_doc,id_sexo,d_barrio) " +
-                "VALUES(@param1, @param2, @param3, @param4, @param5,@param6,@param7,@param8,@param9)";
+            cnn.pCmd.CommandText = "INSERT INTO CLIENTES(nombre,apellido,fecha_nac,calle,altura,nro_documento,id_tipo_doc,id_sexo,d_barrio, Cancelada) " +
+                "VALUES(@param1, @param2, @param3, @param4, @param5,@param6,@param7,@param8,@param9,@param10)";
             cnn.pCmd.Parameters.AddWithValue("@param1", cli.pNombre);
             cnn.pCmd.Parameters.AddWithValue("@param2", cli.pApellido);
             cnn.pCmd.Parameters.AddWithValue("@param3", cli.pFecha_nac);
@@ -46,6 +47,7 @@ namespace FormProgramacion
             cnn.pCmd.Parameters.AddWithValue("@param7", cli.pId_tipo_doc);
             cnn.pCmd.Parameters.AddWithValue("@param8", cli.pId_sexo);
             cnn.pCmd.Parameters.AddWithValue("@param9", cli.pD_barrio);
+            cnn.pCmd.Parameters.AddWithValue("@param10", 0);
             cnn.pCmd.ExecuteNonQuery();
             cnn.desconectar();
             cnn.pCmd.Parameters.Clear();
@@ -74,40 +76,38 @@ namespace FormProgramacion
             cnn.pCmd.Parameters.AddWithValue("@param7", cli.pId_tipo_doc);
             cnn.pCmd.Parameters.AddWithValue("@param8", cli.pId_sexo);
             cnn.pCmd.Parameters.AddWithValue("@param9", cli.pD_barrio);
-            
+
             cnn.pCmd.Parameters.AddWithValue("@pk", cli.id_cliente);
+            cnn.pCmd.ExecuteNonQuery();
+            cnn.desconectar();  
+            cnn.pCmd.Parameters.Clear();
+        }
+        public void borrar(Cliente c)
+        {
+
+            string sentenciaSQL = "UPDATE CLIENTES SET " +
+                            "Cancelada = @param1 " +
+
+                            "WHERE Id_cliente = @pk";
+            cnn.conectar();
+
+
+            cnn.pCmd.CommandText = sentenciaSQL;
+            cnn.pCmd.Parameters.AddWithValue("@param1", 1);
+            cnn.pCmd.Parameters.AddWithValue("@pk", c.pId_cliente);
             cnn.pCmd.ExecuteNonQuery();
             cnn.desconectar();
             cnn.pCmd.Parameters.Clear();
-        }
-        public void borrar(int codigo)
-        {
-            string sentenciaSQL = "";
-            cnn.conectar();
-            sentenciaSQL = "DELETE FROM CLIENTES " +
-                    "WHERE id_cliente = " + codigo;
-            cnn.pCmd.CommandText = sentenciaSQL;
-            cnn.pCmd.ExecuteNonQuery();
-            cnn.desconectar();
 
         }
 
-        int sex;
-        public string SexoDelCliente()
-        {
-            if (id_sexo == 1)
-                return "Femenino";
-            else
-                return "Masculino";
-        }
 
         public override string ToString()
         {
             string txt = "";
-            txt = id_cliente +"  " +apellido + " , " + nombre;
+            txt = id_cliente + "  " + apellido + " , " + nombre;
             return txt;
         }
-
 
     }
 }

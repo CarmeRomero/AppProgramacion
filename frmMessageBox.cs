@@ -12,9 +12,16 @@ namespace FormProgramacion
 {
     public partial class frmMessageBox : Form
     {
+        string label;
         public frmMessageBox()
         {
             InitializeComponent();
+        }
+
+        public string pLabel 
+        {
+            set { this.lblTexto.Text = value; }
+            get { return this.lblTexto.Text; }
         }
 
         private void button1_Click(object sender, EventArgs e)

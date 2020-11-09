@@ -85,7 +85,7 @@ namespace FormProgramacion
             {
                 Cliente cli = new Cliente();
                 if (!cnn.pDr.IsDBNull(0))
-                 cli.pId_cliente = cnn.pDr.GetInt32(0);
+                    cli.pId_cliente = cnn.pDr.GetInt32(0);
                 if (!cnn.pDr.IsDBNull(1))
                     cli.pNombre = cnn.pDr.GetString(1);
                 if (!cnn.pDr.IsDBNull(2))
@@ -104,9 +104,11 @@ namespace FormProgramacion
                     cli.pId_sexo = cnn.pDr.GetInt32(8);
                 if (!cnn.pDr.IsDBNull(9))
                     cli.pD_barrio = cnn.pDr.GetInt32(9);
+                if (cnn.pDr.GetInt32(10) == 0)
+                    lP.Add(cli);
 
 
-                lP.Add(cli);
+
             }
 
             cnn.pDr.Close();
@@ -126,7 +128,7 @@ namespace FormProgramacion
             habilitarCampos(false);
             cargarCombos(cboBarrioCliente, "BARRIOS");
             cargarCombos(cboTipoDocCliente, "TIPOS_DOCUMENTO");
-            cargarLista(lstClientes, " CLIENTES");
+            cargarLista(lstClientes, "CLIENTES");
             limpiar();
         }
 
@@ -153,7 +155,23 @@ namespace FormProgramacion
 
         private void btnBorrarCliente_Click(object sender, EventArgs e)
         {
+            int k = lstClientes.SelectedIndex;
+            if (lstClientes.SelectedIndex >= 0)
+            {
+                if (MessageBox.Show("Esta seguro que desea eliminar este cliente?", "Eliminar",
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Warning,
+                    MessageBoxDefaultButton.Button1) == DialogResult.Yes)
+                {
+                    lP[k].borrar(lP[k]);
+                    limpiar();
+                    lP.Clear();
+                    cargarLista(lstClientes, "CLIENTES");
+                }
 
+
+            }
+            else
+                MessageBox.Show("Debe seleccionar una persona a eliminar", "Item", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -233,24 +251,6 @@ namespace FormProgramacion
         
 
 
-            // VER SI SIRVE EL AUTOCOMPLETADO CON ALGUN CAMPO
-
-            //void autoCompleteText(string nombreTabla, TextBox txtbx)
-            //{
-            //    txtbx.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-            //    txtbx.AutoCompleteSource = AutoCompleteSource.CustomSource;
-            //    AutoCompleteStringCollection coll = new AutoCompleteStringCollection();
-
-            //    cnn.leerTabla(nombreTabla);
-            //    while (cnn.pDr.Read())
-            //    {
-            //        string descripcion = cnn.pDr.GetString(1);
-            //        coll.Add(descripcion);
-            //    }
-            //    cnn.pDr.Close();
-            //    cnn.desconectar();
-            //    txtbx.AutoCompleteCustomSource = coll;
-            //}
 
 
 
@@ -334,7 +334,10 @@ namespace FormProgramacion
 
         }
 
+        private void label10_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 
 }

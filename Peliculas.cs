@@ -160,7 +160,11 @@ namespace FormProgramacion
                 txtTitulo.Focus();
             }
             else
-                FMB.Show();
+            {
+                FMB.pLabel = "Debe seleccionar una pelicula";
+                FMB.ShowDialog();
+            }
+                
             
         }
 
@@ -218,8 +222,7 @@ namespace FormProgramacion
                         lP[k].editar(lP[k]);
                         habilitarCampos(false);
                     }
-                    else
-                        FMB.Show();
+                   
 
                 }
                 lP.Clear();
@@ -237,19 +240,22 @@ namespace FormProgramacion
             {
                 if (string.IsNullOrEmpty(txtTitulo.Text))
                 {
-                    MessageBox.Show("Debe ingresar un titulo", "Completar");
+                    FMB.pLabel = "Debe ingresar un titulo";
+                    FMB.ShowDialog();
                     txtTitulo.Focus();
                     return false;
                 }
                 if (cboGenero.SelectedIndex == -1)
                 {
-                    MessageBox.Show("Debe ingresar un genero", "Completar");
+                    FMB.pLabel = "Debe seleccionar un genero";
+                    FMB.ShowDialog();
                     cboGenero.Focus();
                     return false;
                 }
                 if (string.IsNullOrEmpty(txtNacionalidad.Text))
                 {
-                    MessageBox.Show("Debe ingresar una nacionalidad", "Completar");
+                    FMB.pLabel = "Debe ingresar una nacionalidad";
+                    FMB.ShowDialog();
                     txtNacionalidad.Focus();
                     return false;
                 }

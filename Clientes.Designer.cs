@@ -40,22 +40,22 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtCalleCliente = new System.Windows.Forms.TextBox();
             this.txtAlturaCliente = new System.Windows.Forms.TextBox();
+            this.cboBarrioCliente = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.rbtFemCliente = new System.Windows.Forms.RadioButton();
+            this.rbtSinEspecificar = new System.Windows.Forms.RadioButton();
             this.rbtMasculinoCliente = new System.Windows.Forms.RadioButton();
             this.label9 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.cboTipoDocCliente = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.dtpFechaNacCliente = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.txtApellidoCliente = new System.Windows.Forms.TextBox();
             this.txtDNICliente = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtNombreCliente = new System.Windows.Forms.TextBox();
-            this.cboBarrioCliente = new System.Windows.Forms.ComboBox();
-            this.rbtSinEspecificar = new System.Windows.Forms.RadioButton();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -67,7 +67,7 @@
             this.btnBorrarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBorrarCliente.Font = new System.Drawing.Font("Britannic Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBorrarCliente.ForeColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.btnBorrarCliente.Location = new System.Drawing.Point(683, 321);
+            this.btnBorrarCliente.Location = new System.Drawing.Point(683, 319);
             this.btnBorrarCliente.Name = "btnBorrarCliente";
             this.btnBorrarCliente.Size = new System.Drawing.Size(99, 48);
             this.btnBorrarCliente.TabIndex = 30;
@@ -81,7 +81,7 @@
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Britannic Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.btnCancelar.Location = new System.Drawing.Point(518, 396);
+            this.btnCancelar.Location = new System.Drawing.Point(518, 394);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(99, 36);
             this.btnCancelar.TabIndex = 31;
@@ -96,7 +96,7 @@
             this.btnGrabar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGrabar.Font = new System.Drawing.Font("Britannic Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGrabar.ForeColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.btnGrabar.Location = new System.Drawing.Point(630, 384);
+            this.btnGrabar.Location = new System.Drawing.Point(630, 382);
             this.btnGrabar.Name = "btnGrabar";
             this.btnGrabar.Size = new System.Drawing.Size(99, 48);
             this.btnGrabar.TabIndex = 32;
@@ -111,7 +111,7 @@
             this.btnEditarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditarCliente.Font = new System.Drawing.Font("Britannic Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditarCliente.ForeColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.btnEditarCliente.Location = new System.Drawing.Point(569, 321);
+            this.btnEditarCliente.Location = new System.Drawing.Point(569, 319);
             this.btnEditarCliente.Name = "btnEditarCliente";
             this.btnEditarCliente.Size = new System.Drawing.Size(99, 48);
             this.btnEditarCliente.TabIndex = 33;
@@ -126,7 +126,7 @@
             this.btnNuevoCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNuevoCliente.Font = new System.Drawing.Font("Britannic Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNuevoCliente.ForeColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.btnNuevoCliente.Location = new System.Drawing.Point(455, 321);
+            this.btnNuevoCliente.Location = new System.Drawing.Point(455, 319);
             this.btnNuevoCliente.Name = "btnNuevoCliente";
             this.btnNuevoCliente.Size = new System.Drawing.Size(99, 48);
             this.btnNuevoCliente.TabIndex = 34;
@@ -137,7 +137,7 @@
             // lstClientes
             // 
             this.lstClientes.FormattingEnabled = true;
-            this.lstClientes.Location = new System.Drawing.Point(509, 17);
+            this.lstClientes.Location = new System.Drawing.Point(509, 20);
             this.lstClientes.Name = "lstClientes";
             this.lstClientes.Size = new System.Drawing.Size(220, 264);
             this.lstClientes.TabIndex = 29;
@@ -152,7 +152,7 @@
             this.groupBox2.Controls.Add(this.txtAlturaCliente);
             this.groupBox2.Controls.Add(this.cboBarrioCliente);
             this.groupBox2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox2.Location = new System.Drawing.Point(21, 313);
+            this.groupBox2.Location = new System.Drawing.Point(21, 311);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(389, 120);
             this.groupBox2.TabIndex = 28;
@@ -203,6 +203,14 @@
             this.txtAlturaCliente.Size = new System.Drawing.Size(163, 20);
             this.txtAlturaCliente.TabIndex = 1;
             // 
+            // cboBarrioCliente
+            // 
+            this.cboBarrioCliente.FormattingEnabled = true;
+            this.cboBarrioCliente.Location = new System.Drawing.Point(171, 87);
+            this.cboBarrioCliente.Name = "cboBarrioCliente";
+            this.cboBarrioCliente.Size = new System.Drawing.Size(163, 21);
+            this.cboBarrioCliente.TabIndex = 3;
+            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.rbtFemCliente);
@@ -220,7 +228,7 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.txtNombreCliente);
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox1.Location = new System.Drawing.Point(19, 17);
+            this.groupBox1.Location = new System.Drawing.Point(19, 20);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(391, 290);
             this.groupBox1.TabIndex = 27;
@@ -239,6 +247,18 @@
             this.rbtFemCliente.TabStop = true;
             this.rbtFemCliente.Text = "Femenino";
             this.rbtFemCliente.UseVisualStyleBackColor = true;
+            // 
+            // rbtSinEspecificar
+            // 
+            this.rbtSinEspecificar.AutoSize = true;
+            this.rbtSinEspecificar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.rbtSinEspecificar.Location = new System.Drawing.Point(208, 242);
+            this.rbtSinEspecificar.Name = "rbtSinEspecificar";
+            this.rbtSinEspecificar.Size = new System.Drawing.Size(94, 17);
+            this.rbtSinEspecificar.TabIndex = 5;
+            this.rbtSinEspecificar.TabStop = true;
+            this.rbtSinEspecificar.Text = "Sin especificar";
+            this.rbtSinEspecificar.UseVisualStyleBackColor = true;
             // 
             // rbtMasculinoCliente
             // 
@@ -282,6 +302,14 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "Nombre";
             // 
+            // cboTipoDocCliente
+            // 
+            this.cboTipoDocCliente.FormattingEnabled = true;
+            this.cboTipoDocCliente.Location = new System.Drawing.Point(176, 139);
+            this.cboTipoDocCliente.Name = "cboTipoDocCliente";
+            this.cboTipoDocCliente.Size = new System.Drawing.Size(160, 21);
+            this.cboTipoDocCliente.TabIndex = 3;
+            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -291,14 +319,6 @@
             this.label8.Size = new System.Drawing.Size(31, 13);
             this.label8.TabIndex = 4;
             this.label8.Text = "Sexo";
-            // 
-            // cboTipoDocCliente
-            // 
-            this.cboTipoDocCliente.FormattingEnabled = true;
-            this.cboTipoDocCliente.Location = new System.Drawing.Point(176, 139);
-            this.cboTipoDocCliente.Name = "cboTipoDocCliente";
-            this.cboTipoDocCliente.Size = new System.Drawing.Size(160, 21);
-            this.cboTipoDocCliente.TabIndex = 3;
             // 
             // dtpFechaNacCliente
             // 
@@ -348,32 +368,12 @@
             this.txtNombreCliente.Size = new System.Drawing.Size(163, 20);
             this.txtNombreCliente.TabIndex = 1;
             // 
-            // cboBarrioCliente
-            // 
-            this.cboBarrioCliente.FormattingEnabled = true;
-            this.cboBarrioCliente.Location = new System.Drawing.Point(171, 87);
-            this.cboBarrioCliente.Name = "cboBarrioCliente";
-            this.cboBarrioCliente.Size = new System.Drawing.Size(163, 21);
-            this.cboBarrioCliente.TabIndex = 3;
-            // 
-            // rbtSinEspecificar
-            // 
-            this.rbtSinEspecificar.AutoSize = true;
-            this.rbtSinEspecificar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.rbtSinEspecificar.Location = new System.Drawing.Point(208, 242);
-            this.rbtSinEspecificar.Name = "rbtSinEspecificar";
-            this.rbtSinEspecificar.Size = new System.Drawing.Size(94, 17);
-            this.rbtSinEspecificar.TabIndex = 5;
-            this.rbtSinEspecificar.TabStop = true;
-            this.rbtSinEspecificar.Text = "Sin especificar";
-            this.rbtSinEspecificar.UseVisualStyleBackColor = true;
-            // 
             // Clientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 449);
             this.Controls.Add(this.btnBorrarCliente);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnGrabar);
