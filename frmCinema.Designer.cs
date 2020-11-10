@@ -30,8 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCinema));
             this.panelMenu = new System.Windows.Forms.Panel();
-            this.btnReservas = new FontAwesome.Sharp.IconButton();
-            this.btnGenero = new FontAwesome.Sharp.IconButton();
             this.iconButton6 = new FontAwesome.Sharp.IconButton();
             this.btnPeriodos = new FontAwesome.Sharp.IconButton();
             this.btnPagos = new FontAwesome.Sharp.IconButton();
@@ -62,8 +60,6 @@
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            this.panelMenu.Controls.Add(this.btnReservas);
-            this.panelMenu.Controls.Add(this.btnGenero);
             this.panelMenu.Controls.Add(this.iconButton6);
             this.panelMenu.Controls.Add(this.btnPeriodos);
             this.panelMenu.Controls.Add(this.btnPagos);
@@ -76,54 +72,6 @@
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(210, 520);
             this.panelMenu.TabIndex = 0;
-            // 
-            // btnReservas
-            // 
-            this.btnReservas.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnReservas.FlatAppearance.BorderSize = 0;
-            this.btnReservas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReservas.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.btnReservas.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnReservas.IconChar = FontAwesome.Sharp.IconChar.Unlock;
-            this.btnReservas.IconColor = System.Drawing.Color.Gainsboro;
-            this.btnReservas.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnReservas.IconSize = 30;
-            this.btnReservas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReservas.Location = new System.Drawing.Point(0, 455);
-            this.btnReservas.Name = "btnReservas";
-            this.btnReservas.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnReservas.Rotation = 0D;
-            this.btnReservas.Size = new System.Drawing.Size(210, 60);
-            this.btnReservas.TabIndex = 8;
-            this.btnReservas.Text = "Reservas";
-            this.btnReservas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReservas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnReservas.UseVisualStyleBackColor = true;
-            this.btnReservas.Click += new System.EventHandler(this.btnReservas_Click);
-            // 
-            // btnGenero
-            // 
-            this.btnGenero.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnGenero.FlatAppearance.BorderSize = 0;
-            this.btnGenero.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGenero.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.btnGenero.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnGenero.IconChar = FontAwesome.Sharp.IconChar.Grav;
-            this.btnGenero.IconColor = System.Drawing.Color.Gainsboro;
-            this.btnGenero.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnGenero.IconSize = 30;
-            this.btnGenero.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGenero.Location = new System.Drawing.Point(0, 400);
-            this.btnGenero.Name = "btnGenero";
-            this.btnGenero.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnGenero.Rotation = 0D;
-            this.btnGenero.Size = new System.Drawing.Size(210, 55);
-            this.btnGenero.TabIndex = 7;
-            this.btnGenero.Text = "Género";
-            this.btnGenero.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGenero.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnGenero.UseVisualStyleBackColor = true;
-            this.btnGenero.Click += new System.EventHandler(this.btnGenero_Click);
             // 
             // iconButton6
             // 
@@ -215,7 +163,7 @@
             this.btnComprobantes.Rotation = 0D;
             this.btnComprobantes.Size = new System.Drawing.Size(210, 55);
             this.btnComprobantes.TabIndex = 3;
-            this.btnComprobantes.Text = "Comprobantes";
+            this.btnComprobantes.Text = "Reporte de Clientes";
             this.btnComprobantes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnComprobantes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnComprobantes.UseVisualStyleBackColor = true;
@@ -466,8 +414,6 @@
         private FontAwesome.Sharp.IconPictureBox iconoFormularioHijo;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panelEscritorio;
-        private FontAwesome.Sharp.IconButton btnReservas;
-        private FontAwesome.Sharp.IconButton btnGenero;
         private FontAwesome.Sharp.IconButton btnMinimizar;
         private FontAwesome.Sharp.IconButton btnExit;
         private FontAwesome.Sharp.IconButton btnExpandir;

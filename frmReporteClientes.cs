@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace FormProgramacion
 {
-    public partial class Comprobantes : Form
+    public partial class frmReporteClientes : Form
     {
-        public Comprobantes()
+        public frmReporteClientes()
         {
             InitializeComponent();
         }

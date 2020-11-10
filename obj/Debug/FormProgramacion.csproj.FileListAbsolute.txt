@@ -57,7 +57,6 @@ C:\Users\causa\OneDrive\Documentos\GitHub\AppProgramacion\bin\Debug\FormPrograma
 C:\Users\causa\OneDrive\Documentos\GitHub\AppProgramacion\bin\Debug\FontAwesome.Sharp.dll
 C:\Users\causa\OneDrive\Documentos\GitHub\AppProgramacion\obj\Debug\FormProgramacion.Peliculas.resources
 C:\Users\causa\OneDrive\Documentos\GitHub\AppProgramacion\obj\Debug\FormProgramacion.frmCinema.resources
-C:\Users\causa\OneDrive\Documentos\GitHub\AppProgramacion\obj\Debug\FormProgramacion.Comprobantes.resources
 C:\Users\causa\OneDrive\Documentos\GitHub\AppProgramacion\obj\Debug\FormProgramacion.Generos.resources
 C:\Users\causa\OneDrive\Documentos\GitHub\AppProgramacion\obj\Debug\FormProgramacion.Pagos.resources
 C:\Users\causa\OneDrive\Documentos\GitHub\AppProgramacion\obj\Debug\FormProgramacion.Periodos.resources
@@ -90,7 +89,6 @@ C:\Users\Felipe\Desktop\nivelacion TECNICATURA\SEGUNDO CUATRIMESTRE\UTN Segundo 
 C:\Users\Felipe\Desktop\nivelacion TECNICATURA\SEGUNDO CUATRIMESTRE\UTN Segundo Cuatrimestre\Laboratorio II\AppProgramacion\obj\Debug\FormProgramacion.csproj.CopyComplete
 C:\Users\Felipe\Desktop\nivelacion TECNICATURA\SEGUNDO CUATRIMESTRE\UTN Segundo Cuatrimestre\Laboratorio II\AppProgramacion\obj\Debug\FormProgramacion.exe
 C:\Users\Felipe\Desktop\nivelacion TECNICATURA\SEGUNDO CUATRIMESTRE\UTN Segundo Cuatrimestre\Laboratorio II\AppProgramacion\obj\Debug\FormProgramacion.pdb
-C:\Users\causa\OneDrive\Documentos\GitHub\AppProgramacion\obj\Debug\FormProgramacion.csprojAssemblyReference.cache
 C:\Users\causa\OneDrive\Documentos\GitHub\AppProgramacion\obj\Debug\FormProgramacion.frmMessageBox.resources
 C:\Users\Felipe\Desktop\AppProgramacionPablo\bin\Debug\FormProgramacion.exe.config
 C:\Users\Felipe\Desktop\AppProgramacionPablo\bin\Debug\FormProgramacion.exe
@@ -113,3 +111,5 @@ C:\Users\Felipe\Desktop\AppProgramacionPablo\obj\Debug\FormProgramacion.csproj.C
 C:\Users\Felipe\Desktop\AppProgramacionPablo\obj\Debug\FormProgramacion.csproj.CopyComplete
 C:\Users\Felipe\Desktop\AppProgramacionPablo\obj\Debug\FormProgramacion.exe
 C:\Users\Felipe\Desktop\AppProgramacionPablo\obj\Debug\FormProgramacion.pdb
+C:\Users\causa\OneDrive\Documentos\GitHub\AppProgramacion\obj\Debug\FormProgramacion.csprojAssemblyReference.cache
+C:\Users\causa\OneDrive\Documentos\GitHub\AppProgramacion\obj\Debug\FormProgramacion.frmReporteClientes.resources
