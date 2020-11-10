@@ -28,27 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.CINEDataSet = new FormProgramacion.CINEDataSet();
-            this.TABLA_COMPLETABindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.TABLA_COMPLETATableAdapter = new FormProgramacion.CINEDataSetTableAdapters.TABLA_COMPLETATableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.CINEDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TABLA_COMPLETABindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // CINEDataSet
-            // 
-            this.CINEDataSet.DataSetName = "CINEDataSet";
-            this.CINEDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // TABLA_COMPLETABindingSource
-            // 
-            this.TABLA_COMPLETABindingSource.DataMember = "TABLA_COMPLETA";
-            this.TABLA_COMPLETABindingSource.DataSource = this.CINEDataSet;
-            // 
-            // TABLA_COMPLETATableAdapter
-            // 
-            this.TABLA_COMPLETATableAdapter.ClearBeforeFill = true;
             // 
             // frmReporteClientes
             // 
@@ -58,15 +38,10 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Name = "frmReporteClientes";
             this.Text = "Reporte de Clientes";
-            ((System.ComponentModel.ISupportInitialize)(this.CINEDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TABLA_COMPLETABindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.BindingSource TABLA_COMPLETABindingSource;
-        private CINEDataSet CINEDataSet;
-        private CINEDataSetTableAdapters.TABLA_COMPLETATableAdapter TABLA_COMPLETATableAdapter;
     }
 }
