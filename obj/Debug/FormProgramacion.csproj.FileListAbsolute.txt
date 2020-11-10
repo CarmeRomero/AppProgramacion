@@ -113,3 +113,10 @@ C:\Users\Felipe\Desktop\AppProgramacionPablo\obj\Debug\FormProgramacion.exe
 C:\Users\Felipe\Desktop\AppProgramacionPablo\obj\Debug\FormProgramacion.pdb
 C:\Users\causa\OneDrive\Documentos\GitHub\AppProgramacion\obj\Debug\FormProgramacion.csprojAssemblyReference.cache
 C:\Users\causa\OneDrive\Documentos\GitHub\AppProgramacion\obj\Debug\FormProgramacion.frmReporteClientes.resources
+C:\Users\causa\OneDrive\Documentos\GitHub\AppProgramacion\bin\Debug\SqlServerTypes\x64\msvcr120.dll
+C:\Users\causa\OneDrive\Documentos\GitHub\AppProgramacion\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
+C:\Users\causa\OneDrive\Documentos\GitHub\AppProgramacion\bin\Debug\SqlServerTypes\x86\msvcr120.dll
+C:\Users\causa\OneDrive\Documentos\GitHub\AppProgramacion\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
+C:\Users\causa\OneDrive\Documentos\GitHub\AppProgramacion\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\causa\OneDrive\Documentos\GitHub\AppProgramacion\obj\Debug\RdlCompile.cache
+C:\Users\causa\OneDrive\Documentos\GitHub\AppProgramacion\obj\Debug\RdlCompile.compiled
