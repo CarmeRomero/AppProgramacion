@@ -111,7 +111,6 @@ C:\Users\Felipe\Desktop\AppProgramacionPablo\obj\Debug\FormProgramacion.csproj.C
 C:\Users\Felipe\Desktop\AppProgramacionPablo\obj\Debug\FormProgramacion.csproj.CopyComplete
 C:\Users\Felipe\Desktop\AppProgramacionPablo\obj\Debug\FormProgramacion.exe
 C:\Users\Felipe\Desktop\AppProgramacionPablo\obj\Debug\FormProgramacion.pdb
-C:\Users\causa\OneDrive\Documentos\GitHub\AppProgramacion\obj\Debug\FormProgramacion.csprojAssemblyReference.cache
 C:\Users\causa\OneDrive\Documentos\GitHub\AppProgramacion\obj\Debug\FormProgramacion.frmReporteClientes.resources
 C:\Users\causa\OneDrive\Documentos\GitHub\AppProgramacion\bin\Debug\SqlServerTypes\x64\msvcr120.dll
 C:\Users\causa\OneDrive\Documentos\GitHub\AppProgramacion\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
