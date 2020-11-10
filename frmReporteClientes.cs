@@ -16,5 +16,16 @@ namespace FormProgramacion
         {
             InitializeComponent();
         }
+
+        private void frmReporteClientes_Load(object sender, EventArgs e)
+        {
+
+            this.reportViewer1.RefreshReport();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
