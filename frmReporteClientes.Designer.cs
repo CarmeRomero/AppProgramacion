@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource7 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.btnImprimirTodo = new System.Windows.Forms.Button();
             this.btnImprimirFiltro = new System.Windows.Forms.Button();
@@ -49,25 +49,26 @@
             this.TABLA_COMPLETABindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.TABLA_COMPLETATableAdapter = new FormProgramacion.CINEDataSetTableAdapters.TABLA_COMPLETATableAdapter();
             this.chkEdades = new System.Windows.Forms.CheckBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.CINEDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TABLA_COMPLETABindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // reportViewer1
             // 
-            reportDataSource7.Name = "DataSet1";
-            reportDataSource7.Value = this.TABLA_COMPLETABindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource7);
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.TABLA_COMPLETABindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "FormProgramacion.rptClientes.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(28, 21);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(725, 345);
+            this.reportViewer1.Size = new System.Drawing.Size(725, 407);
             this.reportViewer1.TabIndex = 0;
             // 
             // btnImprimirTodo
             // 
-            this.btnImprimirTodo.Location = new System.Drawing.Point(58, 372);
+            this.btnImprimirTodo.Location = new System.Drawing.Point(69, 447);
             this.btnImprimirTodo.Name = "btnImprimirTodo";
             this.btnImprimirTodo.Size = new System.Drawing.Size(75, 37);
             this.btnImprimirTodo.TabIndex = 1;
@@ -77,7 +78,7 @@
             // 
             // btnImprimirFiltro
             // 
-            this.btnImprimirFiltro.Location = new System.Drawing.Point(678, 375);
+            this.btnImprimirFiltro.Location = new System.Drawing.Point(69, 508);
             this.btnImprimirFiltro.Name = "btnImprimirFiltro";
             this.btnImprimirFiltro.Size = new System.Drawing.Size(75, 37);
             this.btnImprimirFiltro.TabIndex = 2;
@@ -87,21 +88,21 @@
             // 
             // txtApellido
             // 
-            this.txtApellido.Location = new System.Drawing.Point(458, 382);
+            this.txtApellido.Location = new System.Drawing.Point(340, 451);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(161, 20);
             this.txtApellido.TabIndex = 3;
             // 
             // txtEdad1
             // 
-            this.txtEdad1.Location = new System.Drawing.Point(458, 420);
+            this.txtEdad1.Location = new System.Drawing.Point(340, 489);
             this.txtEdad1.Name = "txtEdad1";
             this.txtEdad1.Size = new System.Drawing.Size(38, 20);
             this.txtEdad1.TabIndex = 4;
             // 
             // txtEdad2
             // 
-            this.txtEdad2.Location = new System.Drawing.Point(525, 420);
+            this.txtEdad2.Location = new System.Drawing.Point(407, 489);
             this.txtEdad2.Name = "txtEdad2";
             this.txtEdad2.Size = new System.Drawing.Size(38, 20);
             this.txtEdad2.TabIndex = 5;
@@ -109,21 +110,21 @@
             // cboTemporada
             // 
             this.cboTemporada.FormattingEnabled = true;
-            this.cboTemporada.Location = new System.Drawing.Point(458, 458);
+            this.cboTemporada.Location = new System.Drawing.Point(340, 533);
             this.cboTemporada.Name = "cboTemporada";
-            this.cboTemporada.Size = new System.Drawing.Size(137, 21);
+            this.cboTemporada.Size = new System.Drawing.Size(105, 21);
             this.cboTemporada.TabIndex = 6;
             // 
             // dtpInicio
             // 
-            this.dtpInicio.Location = new System.Drawing.Point(458, 497);
+            this.dtpInicio.Location = new System.Drawing.Point(662, 452);
             this.dtpInicio.Name = "dtpInicio";
             this.dtpInicio.Size = new System.Drawing.Size(126, 20);
             this.dtpInicio.TabIndex = 7;
             // 
             // dtpFin
             // 
-            this.dtpFin.Location = new System.Drawing.Point(458, 535);
+            this.dtpFin.Location = new System.Drawing.Point(662, 490);
             this.dtpFin.Name = "dtpFin";
             this.dtpFin.Size = new System.Drawing.Size(126, 20);
             this.dtpFin.TabIndex = 8;
@@ -133,7 +134,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label1.Location = new System.Drawing.Point(374, 383);
+            this.label1.Location = new System.Drawing.Point(256, 452);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(66, 19);
             this.label1.TabIndex = 9;
@@ -144,7 +145,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label2.Location = new System.Drawing.Point(356, 421);
+            this.label2.Location = new System.Drawing.Point(238, 490);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(84, 19);
             this.label2.TabIndex = 10;
@@ -155,7 +156,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label3.Location = new System.Drawing.Point(502, 420);
+            this.label3.Location = new System.Drawing.Point(384, 489);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(17, 19);
             this.label3.TabIndex = 11;
@@ -167,7 +168,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label4.Location = new System.Drawing.Point(354, 458);
+            this.label4.Location = new System.Drawing.Point(236, 533);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(86, 19);
             this.label4.TabIndex = 12;
@@ -178,7 +179,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label5.Location = new System.Drawing.Point(336, 500);
+            this.label5.Location = new System.Drawing.Point(540, 455);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(104, 19);
             this.label5.TabIndex = 13;
@@ -189,7 +190,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label6.Location = new System.Drawing.Point(353, 538);
+            this.label6.Location = new System.Drawing.Point(557, 493);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(87, 19);
             this.label6.TabIndex = 14;
@@ -214,20 +215,33 @@
             this.chkEdades.AutoSize = true;
             this.chkEdades.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
             this.chkEdades.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.chkEdades.Location = new System.Drawing.Point(579, 421);
+            this.chkEdades.Location = new System.Drawing.Point(451, 481);
             this.chkEdades.Name = "chkEdades";
-            this.chkEdades.Size = new System.Drawing.Size(76, 23);
+            this.chkEdades.Size = new System.Drawing.Size(91, 42);
             this.chkEdades.TabIndex = 16;
-            this.chkEdades.Text = "Edades";
+            this.chkEdades.Text = "Habilitar \r\nRango";
             this.chkEdades.UseVisualStyleBackColor = true;
             this.chkEdades.CheckedChanged += new System.EventHandler(this.chkEdades_CheckedChanged);
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
+            this.checkBox1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.checkBox1.Location = new System.Drawing.Point(451, 529);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(91, 42);
+            this.checkBox1.TabIndex = 17;
+            this.checkBox1.Text = "Habilitar \r\nRango";
+            this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // frmReporteClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.ClientSize = new System.Drawing.Size(800, 571);
+            this.ClientSize = new System.Drawing.Size(800, 577);
+            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.chkEdades);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -275,5 +289,6 @@
         private CINEDataSet CINEDataSet;
         private CINEDataSetTableAdapters.TABLA_COMPLETATableAdapter TABLA_COMPLETATableAdapter;
         private System.Windows.Forms.CheckBox chkEdades;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }

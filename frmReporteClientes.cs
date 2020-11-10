@@ -36,8 +36,8 @@ namespace FormProgramacion
 
         private void btnImprimirTodo_Click(object sender, EventArgs e)
         {
-            string strSQL = "select Id_cliente, Apellido , Nombre, Tipo_de_compra," +
-                            "Comprobante,Fecha_de_venta,Temporada,Tipo_de_compra,Forma_de_pago,Precio,Sucursal " +
+            string strSQL = "select Id_cliente, Apellido , Nombre,Edad," +
+                            "Comprobante,Fecha_de_venta,temporada,Tipo_de_compra,Forma_de_pago,Precio,Sucursal " +
                             "from TABLA_COMPLETA " +
                             
                             "order by 1 ";
@@ -52,8 +52,8 @@ namespace FormProgramacion
             {
                 
 
-                strSQL = "select Id_cliente, Apellido , Nombre, Tipo_de_compra," +
-                                            "Comprobante,Fecha_de_venta,Temporada,Tipo_de_compra,Forma_de_pago,Precio,Sucursal " +
+                strSQL = "select Id_cliente, Apellido , Nombre,Edad," +
+                                            "Comprobante,Fecha_de_venta,temporada,Tipo_de_compra,Forma_de_pago,Precio,Sucursal " +
                                             "from TABLA_COMPLETA " +
                                             "where Apellido like '" + txtApellido.Text + "%' AND " +
                                             "edad between " + txtEdad1.Text + " AND " + txtEdad2.Text +
@@ -61,10 +61,10 @@ namespace FormProgramacion
             }
             else 
             {
-                strSQL = "select Id_cliente, Apellido , Nombre, Tipo_de_compra," +
-                                            "Comprobante,Fecha_de_venta,Temporada,Tipo_de_compra,Forma_de_pago,Precio,Sucursal " +
+                strSQL = "select Id_cliente, Apellido , Nombre,Edad, Tipo_de_compra," +
+                                            "Comprobante,Fecha_de_venta,temporada,Tipo_de_compra,Forma_de_pago,Precio,Sucursal " +
                                             "from TABLA_COMPLETA " +
-                                            "where Apellido like '" + txtApellido.Text + "%'";
+                                            "where Apellido like '" + txtApellido.Text + "%' ORDER BY 1";
             }
             
 

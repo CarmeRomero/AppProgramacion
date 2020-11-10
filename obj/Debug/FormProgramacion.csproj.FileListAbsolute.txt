@@ -172,3 +172,4 @@ C:\Users\causa\OneDrive\Documentos\GitHub\AppProgramacion\bin\Debug\pt\Microsoft
 C:\Users\causa\OneDrive\Documentos\GitHub\AppProgramacion\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\causa\OneDrive\Documentos\GitHub\AppProgramacion\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\causa\OneDrive\Documentos\GitHub\AppProgramacion\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\causa\OneDrive\Documentos\GitHub\AppProgramacion\obj\Debug\FormProgramacion.csprojAssemblyReference.cache
