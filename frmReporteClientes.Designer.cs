@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource4 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.btnImprimirTodo = new System.Windows.Forms.Button();
             this.btnImprimirFiltro = new System.Windows.Forms.Button();
@@ -49,21 +49,21 @@
             this.TABLA_COMPLETABindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.TABLA_COMPLETATableAdapter = new FormProgramacion.CINEDataSetTableAdapters.TABLA_COMPLETATableAdapter();
             this.chkEdades = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.chkTemporada = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.CINEDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TABLA_COMPLETABindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // reportViewer1
             // 
-            reportDataSource1.Name = "DataSet1";
-            reportDataSource1.Value = this.TABLA_COMPLETABindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            reportDataSource4.Name = "DataSet1";
+            reportDataSource4.Value = this.TABLA_COMPLETABindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource4);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "FormProgramacion.rptClientes.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(28, 21);
+            this.reportViewer1.Location = new System.Drawing.Point(12, 21);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(725, 407);
+            this.reportViewer1.Size = new System.Drawing.Size(822, 407);
             this.reportViewer1.TabIndex = 0;
             // 
             // btnImprimirTodo
@@ -96,19 +96,24 @@
             // txtEdad1
             // 
             this.txtEdad1.Location = new System.Drawing.Point(340, 489);
+            this.txtEdad1.MaxLength = 3;
             this.txtEdad1.Name = "txtEdad1";
             this.txtEdad1.Size = new System.Drawing.Size(38, 20);
             this.txtEdad1.TabIndex = 4;
+            this.txtEdad1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEdad1_KeyPress);
             // 
             // txtEdad2
             // 
             this.txtEdad2.Location = new System.Drawing.Point(407, 489);
+            this.txtEdad2.MaxLength = 3;
             this.txtEdad2.Name = "txtEdad2";
             this.txtEdad2.Size = new System.Drawing.Size(38, 20);
             this.txtEdad2.TabIndex = 5;
+            this.txtEdad2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEdad1_KeyPress);
             // 
             // cboTemporada
             // 
+            this.cboTemporada.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboTemporada.FormattingEnabled = true;
             this.cboTemporada.Location = new System.Drawing.Point(340, 533);
             this.cboTemporada.Name = "cboTemporada";
@@ -223,25 +228,26 @@
             this.chkEdades.UseVisualStyleBackColor = true;
             this.chkEdades.CheckedChanged += new System.EventHandler(this.chkEdades_CheckedChanged);
             // 
-            // checkBox1
+            // chkTemporada
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
-            this.checkBox1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.checkBox1.Location = new System.Drawing.Point(451, 529);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(91, 42);
-            this.checkBox1.TabIndex = 17;
-            this.checkBox1.Text = "Habilitar \r\nRango";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.chkTemporada.AutoSize = true;
+            this.chkTemporada.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
+            this.chkTemporada.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.chkTemporada.Location = new System.Drawing.Point(451, 525);
+            this.chkTemporada.Name = "chkTemporada";
+            this.chkTemporada.Size = new System.Drawing.Size(105, 42);
+            this.chkTemporada.TabIndex = 17;
+            this.chkTemporada.Text = "Habilitar \r\nTemporada";
+            this.chkTemporada.UseVisualStyleBackColor = true;
+            this.chkTemporada.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // frmReporteClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.ClientSize = new System.Drawing.Size(800, 577);
-            this.Controls.Add(this.checkBox1);
+            this.ClientSize = new System.Drawing.Size(846, 577);
+            this.Controls.Add(this.chkTemporada);
             this.Controls.Add(this.chkEdades);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -289,6 +295,6 @@
         private CINEDataSet CINEDataSet;
         private CINEDataSetTableAdapters.TABLA_COMPLETATableAdapter TABLA_COMPLETATableAdapter;
         private System.Windows.Forms.CheckBox chkEdades;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox chkTemporada;
     }
 }
