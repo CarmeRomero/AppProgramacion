@@ -132,7 +132,7 @@ namespace FormProgramacion
         private void iconButton3_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color3);
-            AbrirFormularioHijo(new Comprobantes());
+            AbrirFormularioHijo(new frmReporteClientes());
         }
 
         private void iconButton4_Click(object sender, EventArgs e)

@@ -55,6 +55,15 @@ namespace FormProgramacion
             this.desconectar();
             return dt;
         }
+        public DataTable consultarTabla(string sentenciaSQL)
+        {
+            this.conectar();
+            DataTable dt = new DataTable();
+            this.cmd.CommandText = sentenciaSQL;
+            dt.Load(cmd.ExecuteReader());
+            this.desconectar();
+            return dt;
+        }
 
         public void leerTabla(string nombreTabla)
         {
