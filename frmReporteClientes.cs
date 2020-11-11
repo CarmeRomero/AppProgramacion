@@ -21,7 +21,7 @@ namespace FormProgramacion
         private void frmReporteClientes_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'CINEDataSet.TABLA_COMPLETA' table. You can move, or remove it, as needed.
-            this.TABLA_COMPLETATableAdapter.Fill(this.CINEDataSet.TABLA_COMPLETA);
+            this.DataTable1TableAdapter.Fill(this.BDCINE.DataTable1);
 
             this.reportViewer1.RefreshReport();
             txtEdad1.Enabled = false;
@@ -37,12 +37,18 @@ namespace FormProgramacion
 
         private void btnImprimirTodo_Click(object sender, EventArgs e)
         {
-            string strSQL = "select Id_cliente, Apellido , Nombre,Edad," +
-                            "Comprobante,Fecha_de_venta,temporada,Tipo_de_compra,Forma_de_pago,Precio,Sucursal " +
-                            "from TABLA_COMPLETA " +
-                            
-                            "order by 1 ";
-            TABLA_COMPLETABindingSource.DataSource = cnn.consultarTabla(strSQL);
+            string strSQL = "SELECT CLIENTES.Id_cliente, CLIENTES.apellido, CLIENTES.nombre , CLIENTES.Edad, " +
+                            "COMPROBANTES.Id_comprobante, COMPROBANTES.fecha, TEMPORADAS.temporada, TIPOS_COMPRAS.tipo_compra, " +
+                            "FORMAS_PAGOS.forma_pago, TICKETS.precio, SUCURSALES.sucursal " +
+                            "FROM CLIENTES FULL JOIN " +
+                            "COMPROBANTES ON CLIENTES.Id_cliente = COMPROBANTES.Id_cliente FULL JOIN " +
+                            "FORMAS_PAGOS ON COMPROBANTES.id_formas_pago = FORMAS_PAGOS.id_formas_pago FULL JOIN " +
+                            "SUCURSALES ON COMPROBANTES.id_sucursal = SUCURSALES.id_sucursal FULL JOIN " +
+                            "TEMPORADAS ON COMPROBANTES.id_temporada = TEMPORADAS.id_temporada FULL JOIN " +
+                            "TICKETS ON COMPROBANTES.Id_comprobante = TICKETS.Id_comprobante FULL JOIN " +
+                            "TIPOS_COMPRAS ON COMPROBANTES.id_tipo_compra = TIPOS_COMPRAS.id_tipo_compra " +
+                            "ORDER BY 1";
+            DataTable1BindingSource.DataSource = cnn.consultarTabla(strSQL);
             reportViewer1.RefreshReport();
         }
         public bool validarEdad()
@@ -63,45 +69,50 @@ namespace FormProgramacion
         private void btnImprimirFiltro_Click(object sender, EventArgs e)
         {
             string strSQL = "";
+            string strBase = "SELECT CLIENTES.Id_cliente, CLIENTES.apellido, CLIENTES.nombre , CLIENTES.Edad, " +
+                            "COMPROBANTES.Id_comprobante, COMPROBANTES.fecha, TEMPORADAS.temporada, TIPOS_COMPRAS.tipo_compra, " +
+                            "FORMAS_PAGOS.forma_pago, TICKETS.precio, SUCURSALES.sucursal " +
+                            "FROM CLIENTES FULL JOIN " +
+                            "COMPROBANTES ON CLIENTES.Id_cliente = COMPROBANTES.Id_cliente FULL JOIN " +
+                            "FORMAS_PAGOS ON COMPROBANTES.id_formas_pago = FORMAS_PAGOS.id_formas_pago FULL JOIN " +
+                            "SUCURSALES ON COMPROBANTES.id_sucursal = SUCURSALES.id_sucursal FULL JOIN " +
+                            "TEMPORADAS ON COMPROBANTES.id_temporada = TEMPORADAS.id_temporada FULL JOIN " +
+                            "TICKETS ON COMPROBANTES.Id_comprobante = TICKETS.Id_comprobante FULL JOIN " +
+                            "TIPOS_COMPRAS ON COMPROBANTES.id_tipo_compra = TIPOS_COMPRAS.id_tipo_compra ";
             if (chkEdades.Checked && validarEdad())
             {
-                strSQL = "select Id_cliente, Apellido , Nombre,Edad," +
-                                            "Comprobante,Fecha_de_venta,temporada,Tipo_de_compra,Forma_de_pago,Precio,Sucursal " +
-                                            "from TABLA_COMPLETA " +
-                                            "where Apellido like '" + txtApellido.Text + "%' AND " +
-                                            "edad between " + txtEdad1.Text + " AND " + txtEdad2.Text +
+
+                strSQL = strBase+
+                            
+                                            "where CLIENTES.apellido like '" + txtApellido.Text + "%' AND " +
+                                            "CLIENTES.Edad between " + txtEdad1.Text + " AND " + txtEdad2.Text +
                                             " order by 1 ";
                 if (chkTemporada.Checked)
                 {
-                    strSQL = "select Id_cliente, Apellido , Nombre,Edad," +
-                                            "Comprobante,Fecha_de_venta,temporada,Tipo_de_compra,Forma_de_pago,Precio,Sucursal " +
-                                            "from TABLA_COMPLETA " +
-                                            "where Apellido like '" + txtApellido.Text + "%' AND " +
-                                            "edad between " + txtEdad1.Text + " AND " + txtEdad2.Text +
-                                            " AND id_temporada = " + (int)cboTemporada.SelectedValue +
+                    strSQL = strBase +
+                            
+                                            "where CLIENTES.apellido like '" + txtApellido.Text + "%' AND " +
+                                            "CLIENTES.Edad between " + txtEdad1.Text + " AND " + txtEdad2.Text +
+                                            " AND TEMPORADAS.id_temporada = " + (int)cboTemporada.SelectedValue +
                                             " order by 1 ";
                 }
             }
             else 
             {
-                strSQL = "select Id_cliente, Apellido , Nombre,Edad, Tipo_de_compra," +
-                                            "Comprobante,Fecha_de_venta,temporada,Tipo_de_compra,Forma_de_pago,Precio,Sucursal " +
-                                            "from TABLA_COMPLETA " +
-                                            "where Apellido like '" + txtApellido.Text + "%' ORDER BY 1";
+                strSQL = strBase +
+                                            "where CLIENTES.apellido like '" + txtApellido.Text + "%' ORDER BY 1";
                 if (chkTemporada.Checked)
                 {
-                    strSQL = "select Id_cliente, Apellido , Nombre,Edad, Tipo_de_compra," +
-                                            "Comprobante,Fecha_de_venta,temporada,Tipo_de_compra,Forma_de_pago,Precio,Sucursal " +
-                                            "from TABLA_COMPLETA " +
-                                            "where Apellido like '" + txtApellido.Text + "%' " +
-                                            "AND id_temporada = " + (int)cboTemporada.SelectedValue
+                    strSQL = strBase +
+                                            "where CLIENTES.apellido like '" + txtApellido.Text + "%' " +
+                                            "AND TEMPORADAS.id_temporada = " + (int)cboTemporada.SelectedValue
                                             +" ORDER BY 1";
                 }
             }
-            
 
 
-            TABLA_COMPLETABindingSource.DataSource = cnn.consultarTabla(strSQL);
+
+            DataTable1BindingSource.DataSource = cnn.consultarTabla(strSQL);
             reportViewer1.RefreshReport();
         }
 
@@ -151,6 +162,32 @@ namespace FormProgramacion
             {
                 e.Handled = true;
                 MessageBox.Show("Ingrese una edad valida", "Edad", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void btnFechas_Click(object sender, EventArgs e)
+        {
+            if (dtpInicio.Value > dtpFin.Value)
+            {
+                MessageBox.Show("La fecha inicial debe ser menor a la final", "Fechas", MessageBoxButtons.OK,
+                    MessageBoxIcon.Exclamation);
+                dtpInicio.Focus();
+            }
+            else
+            {
+                string strSQL = "SELECT CLIENTES.Id_cliente, CLIENTES.apellido, CLIENTES.nombre , CLIENTES.Edad, " +
+                            "COMPROBANTES.Id_comprobante, COMPROBANTES.fecha, TEMPORADAS.temporada, TIPOS_COMPRAS.tipo_compra, " +
+                            "FORMAS_PAGOS.forma_pago, TICKETS.precio, SUCURSALES.sucursal " +
+                            "FROM CLIENTES FULL JOIN " +
+                            "COMPROBANTES ON CLIENTES.Id_cliente = COMPROBANTES.Id_cliente FULL JOIN " +
+                            "FORMAS_PAGOS ON COMPROBANTES.id_formas_pago = FORMAS_PAGOS.id_formas_pago FULL JOIN " +
+                            "SUCURSALES ON COMPROBANTES.id_sucursal = SUCURSALES.id_sucursal FULL JOIN " +
+                            "TEMPORADAS ON COMPROBANTES.id_temporada = TEMPORADAS.id_temporada FULL JOIN " +
+                            "TICKETS ON COMPROBANTES.Id_comprobante = TICKETS.Id_comprobante FULL JOIN " +
+                            "TIPOS_COMPRAS ON COMPROBANTES.id_tipo_compra = TIPOS_COMPRAS.id_tipo_compra " +
+                            "WHERE COMPROBANTES.fecha BETWEEN '" + dtpInicio.Value + "' AND '" + dtpFin.Value + "' ";
+                DataTable1BindingSource.DataSource = cnn.consultarTabla(strSQL);
+                reportViewer1.RefreshReport();
             }
         }
     }

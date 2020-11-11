@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="BDCINE" targetNamespace="http://tempuri.org/BDCINE.xsd" xmlns:mstns="http://tempuri.org/BDCINE.xsd" xmlns="http://tempuri.org/BDCINE.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="CINEConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="CINEConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.FormProgramacion.Properties.Settings.GlobalReference.Default.CINEConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DataTable1TableAdapter" GeneratorDataComponentClassName="DataTable1TableAdapter" Name="DataTable1" UserDataComponentName="DataTable1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="CINEConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        CLIENTES.Id_cliente, CLIENTES.nombre, CLIENTES.apellido, CLIENTES.Edad, COMPROBANTES.Id_comprobante, COMPROBANTES.fecha, TEMPORADAS.temporada, TIPOS_DOCUMENTO.tipo_doc, 
+                         FORMAS_PAGOS.forma_pago, SEXOS.sexo, TIPOS_COMPRAS.tipo_compra, TICKETS.id_ticket, TICKETS.precio, SUCURSALES.sucursal
+FROM            CLIENTES FULL JOIN
+                         COMPROBANTES ON CLIENTES.Id_cliente = COMPROBANTES.Id_cliente FULL JOIN
+                         FORMAS_PAGOS ON COMPROBANTES.id_formas_pago = FORMAS_PAGOS.id_formas_pago FULL JOIN
+                         SEXOS ON CLIENTES.id_sexo = SEXOS.id_sexo FULL JOIN
+                         SUCURSALES ON COMPROBANTES.id_sucursal = SUCURSALES.id_sucursal FULL JOIN
+                         TEMPORADAS ON COMPROBANTES.id_temporada = TEMPORADAS.id_temporada FULL JOIN
+                         TICKETS ON COMPROBANTES.Id_comprobante = TICKETS.Id_comprobante FULL JOIN
+                         TIPOS_COMPRAS ON COMPROBANTES.id_tipo_compra = TIPOS_COMPRAS.id_tipo_compra FULL JOIN
+                         TIPOS_DOCUMENTO ON CLIENTES.id_tipo_doc = TIPOS_DOCUMENTO.id_tipo_doc</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Id_cliente" DataSetColumn="Id_cliente" />
+              <Mapping SourceColumn="nombre" DataSetColumn="nombre" />
+              <Mapping SourceColumn="apellido" DataSetColumn="apellido" />
+              <Mapping SourceColumn="Edad" DataSetColumn="Edad" />
+              <Mapping SourceColumn="Id_comprobante" DataSetColumn="Id_comprobante" />
+              <Mapping SourceColumn="fecha" DataSetColumn="fecha" />
+              <Mapping SourceColumn="temporada" DataSetColumn="temporada" />
+              <Mapping SourceColumn="tipo_doc" DataSetColumn="tipo_doc" />
+              <Mapping SourceColumn="forma_pago" DataSetColumn="forma_pago" />
+              <Mapping SourceColumn="sexo" DataSetColumn="sexo" />
+              <Mapping SourceColumn="tipo_compra" DataSetColumn="tipo_compra" />
+              <Mapping SourceColumn="id_ticket" DataSetColumn="id_ticket" />
+              <Mapping SourceColumn="precio" DataSetColumn="precio" />
+              <Mapping SourceColumn="sucursal" DataSetColumn="sucursal" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="BDCINE" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="BDCINE" msprop:Generator_UserDSName="BDCINE">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTable1" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_RowClassName="DataTable1Row" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id_cliente" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnId_cliente" msprop:Generator_ColumnPropNameInRow="Id_cliente" msprop:Generator_ColumnPropNameInTable="Id_clienteColumn" msprop:Generator_UserColumnName="Id_cliente" type="xs:int" minOccurs="0" />
+              <xs:element name="nombre" msprop:Generator_ColumnVarNameInTable="columnnombre" msprop:Generator_ColumnPropNameInRow="nombre" msprop:Generator_ColumnPropNameInTable="nombreColumn" msprop:Generator_UserColumnName="nombre" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="apellido" msprop:Generator_ColumnVarNameInTable="columnapellido" msprop:Generator_ColumnPropNameInRow="apellido" msprop:Generator_ColumnPropNameInTable="apellidoColumn" msprop:Generator_UserColumnName="apellido" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Edad" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnEdad" msprop:Generator_ColumnPropNameInRow="Edad" msprop:Generator_ColumnPropNameInTable="EdadColumn" msprop:Generator_UserColumnName="Edad" type="xs:int" minOccurs="0" />
+              <xs:element name="Id_comprobante" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnId_comprobante" msprop:Generator_ColumnPropNameInRow="Id_comprobante" msprop:Generator_ColumnPropNameInTable="Id_comprobanteColumn" msprop:Generator_UserColumnName="Id_comprobante" type="xs:int" minOccurs="0" />
+              <xs:element name="fecha" msprop:Generator_ColumnVarNameInTable="columnfecha" msprop:Generator_ColumnPropNameInRow="fecha" msprop:Generator_ColumnPropNameInTable="fechaColumn" msprop:Generator_UserColumnName="fecha" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="temporada" msprop:Generator_ColumnVarNameInTable="columntemporada" msprop:Generator_ColumnPropNameInRow="temporada" msprop:Generator_ColumnPropNameInTable="temporadaColumn" msprop:Generator_UserColumnName="temporada" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="tipo_doc" msprop:Generator_ColumnVarNameInTable="columntipo_doc" msprop:Generator_ColumnPropNameInRow="tipo_doc" msprop:Generator_ColumnPropNameInTable="tipo_docColumn" msprop:Generator_UserColumnName="tipo_doc" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="forma_pago" msprop:Generator_ColumnVarNameInTable="columnforma_pago" msprop:Generator_ColumnPropNameInRow="forma_pago" msprop:Generator_ColumnPropNameInTable="forma_pagoColumn" msprop:Generator_UserColumnName="forma_pago" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sexo" msprop:Generator_ColumnVarNameInTable="columnsexo" msprop:Generator_ColumnPropNameInRow="sexo" msprop:Generator_ColumnPropNameInTable="sexoColumn" msprop:Generator_UserColumnName="sexo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="tipo_compra" msprop:Generator_ColumnVarNameInTable="columntipo_compra" msprop:Generator_ColumnPropNameInRow="tipo_compra" msprop:Generator_ColumnPropNameInTable="tipo_compraColumn" msprop:Generator_UserColumnName="tipo_compra" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="id_ticket" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid_ticket" msprop:Generator_ColumnPropNameInRow="id_ticket" msprop:Generator_ColumnPropNameInTable="id_ticketColumn" msprop:Generator_UserColumnName="id_ticket" type="xs:int" minOccurs="0" />
+              <xs:element name="precio" msprop:Generator_ColumnVarNameInTable="columnprecio" msprop:Generator_ColumnPropNameInRow="precio" msprop:Generator_ColumnPropNameInTable="precioColumn" msprop:Generator_UserColumnName="precio" type="xs:decimal" minOccurs="0" />
+              <xs:element name="sucursal" msprop:Generator_ColumnVarNameInTable="columnsucursal" msprop:Generator_ColumnPropNameInRow="sucursal" msprop:Generator_ColumnPropNameInTable="sucursalColumn" msprop:Generator_UserColumnName="sucursal" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

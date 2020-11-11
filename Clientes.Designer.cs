@@ -354,6 +354,7 @@
             // txtDNICliente
             // 
             this.txtDNICliente.Location = new System.Drawing.Point(175, 179);
+            this.txtDNICliente.MaxLength = 10;
             this.txtDNICliente.Name = "txtDNICliente";
             this.txtDNICliente.Size = new System.Drawing.Size(107, 20);
             this.txtDNICliente.TabIndex = 1;

@@ -67,10 +67,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CINEDataSet.Designer.cs">
+    <Compile Include="BDCINE.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>CINEDataSet.xsd</DependentUpon>
+      <DependentUpon>BDCINE.xsd</DependentUpon>
     </Compile>
     <Compile Include="Cliente.cs" />
     <Compile Include="CNN.cs" />
@@ -179,16 +179,16 @@
     <EmbeddedResource Include="Clientes.resx">
       <DependentUpon>Clientes.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="CINEDataSet.xsc">
-      <DependentUpon>CINEDataSet.xsd</DependentUpon>
+    <None Include="BDCINE.xsc">
+      <DependentUpon>BDCINE.xsd</DependentUpon>
     </None>
-    <None Include="CINEDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>CINEDataSet.Designer.cs</LastGenOutput>
+    <None Include="BDCINE.xsd">
       <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BDCINE.Designer.cs</LastGenOutput>
     </None>
-    <None Include="CINEDataSet.xss">
-      <DependentUpon>CINEDataSet.xsd</DependentUpon>
+    <None Include="BDCINE.xss">
+      <DependentUpon>BDCINE.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
