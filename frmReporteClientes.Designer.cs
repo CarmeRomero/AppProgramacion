@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource4 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.btnImprimirTodo = new System.Windows.Forms.Button();
             this.btnImprimirFiltro = new System.Windows.Forms.Button();
@@ -45,20 +45,21 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.CINEDataSet = new FormProgramacion.CINEDataSet();
-            this.TABLA_COMPLETABindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.TABLA_COMPLETATableAdapter = new FormProgramacion.CINEDataSetTableAdapters.TABLA_COMPLETATableAdapter();
             this.chkEdades = new System.Windows.Forms.CheckBox();
             this.chkTemporada = new System.Windows.Forms.CheckBox();
-            ((System.ComponentModel.ISupportInitialize)(this.CINEDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TABLA_COMPLETABindingSource)).BeginInit();
+            this.DataTable1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.BDCINE = new FormProgramacion.BDCINE();
+            this.DataTable1TableAdapter = new FormProgramacion.BDCINETableAdapters.DataTable1TableAdapter();
+            this.btnFechas = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.DataTable1BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BDCINE)).BeginInit();
             this.SuspendLayout();
             // 
             // reportViewer1
             // 
-            reportDataSource4.Name = "DataSet1";
-            reportDataSource4.Value = this.TABLA_COMPLETABindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource4);
+            reportDataSource2.Name = "DataSet1";
+            reportDataSource2.Value = this.DataTable1BindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "FormProgramacion.rptClientes.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(12, 21);
             this.reportViewer1.Name = "reportViewer1";
@@ -201,20 +202,6 @@
             this.label6.TabIndex = 14;
             this.label6.Text = "Fin Periodo";
             // 
-            // CINEDataSet
-            // 
-            this.CINEDataSet.DataSetName = "CINEDataSet";
-            this.CINEDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // TABLA_COMPLETABindingSource
-            // 
-            this.TABLA_COMPLETABindingSource.DataMember = "TABLA_COMPLETA";
-            this.TABLA_COMPLETABindingSource.DataSource = this.CINEDataSet;
-            // 
-            // TABLA_COMPLETATableAdapter
-            // 
-            this.TABLA_COMPLETATableAdapter.ClearBeforeFill = true;
-            // 
             // chkEdades
             // 
             this.chkEdades.AutoSize = true;
@@ -241,12 +228,37 @@
             this.chkTemporada.UseVisualStyleBackColor = true;
             this.chkTemporada.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
+            // DataTable1BindingSource
+            // 
+            this.DataTable1BindingSource.DataMember = "DataTable1";
+            this.DataTable1BindingSource.DataSource = this.BDCINE;
+            // 
+            // BDCINE
+            // 
+            this.BDCINE.DataSetName = "BDCINE";
+            this.BDCINE.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // DataTable1TableAdapter
+            // 
+            this.DataTable1TableAdapter.ClearBeforeFill = true;
+            // 
+            // btnFechas
+            // 
+            this.btnFechas.Location = new System.Drawing.Point(687, 525);
+            this.btnFechas.Name = "btnFechas";
+            this.btnFechas.Size = new System.Drawing.Size(75, 40);
+            this.btnFechas.TabIndex = 18;
+            this.btnFechas.Text = "Filtrar Fechas";
+            this.btnFechas.UseVisualStyleBackColor = true;
+            this.btnFechas.Click += new System.EventHandler(this.btnFechas_Click);
+            // 
             // frmReporteClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.ClientSize = new System.Drawing.Size(846, 577);
+            this.Controls.Add(this.btnFechas);
             this.Controls.Add(this.chkTemporada);
             this.Controls.Add(this.chkEdades);
             this.Controls.Add(this.label6);
@@ -267,8 +279,8 @@
             this.Name = "frmReporteClientes";
             this.Text = "Reporte de Clientes";
             this.Load += new System.EventHandler(this.frmReporteClientes_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.CINEDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TABLA_COMPLETABindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataTable1BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BDCINE)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -291,10 +303,11 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.BindingSource TABLA_COMPLETABindingSource;
-        private CINEDataSet CINEDataSet;
-        private CINEDataSetTableAdapters.TABLA_COMPLETATableAdapter TABLA_COMPLETATableAdapter;
         private System.Windows.Forms.CheckBox chkEdades;
         private System.Windows.Forms.CheckBox chkTemporada;
+        private System.Windows.Forms.BindingSource DataTable1BindingSource;
+        private BDCINE BDCINE;
+        private BDCINETableAdapters.DataTable1TableAdapter DataTable1TableAdapter;
+        private System.Windows.Forms.Button btnFechas;
     }
 }

@@ -30,9 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCinema));
             this.panelMenu = new System.Windows.Forms.Panel();
-            this.iconButton6 = new FontAwesome.Sharp.IconButton();
-            this.btnPeriodos = new FontAwesome.Sharp.IconButton();
-            this.btnPagos = new FontAwesome.Sharp.IconButton();
             this.btnComprobantes = new FontAwesome.Sharp.IconButton();
             this.btnActores = new FontAwesome.Sharp.IconButton();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
@@ -48,6 +45,9 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panelEscritorio = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnPagos = new FontAwesome.Sharp.IconButton();
+            this.btnPeriodos = new FontAwesome.Sharp.IconButton();
+            this.iconButton6 = new FontAwesome.Sharp.IconButton();
             this.panelMenu.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -72,78 +72,6 @@
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(210, 520);
             this.panelMenu.TabIndex = 0;
-            // 
-            // iconButton6
-            // 
-            this.iconButton6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton6.FlatAppearance.BorderSize = 0;
-            this.iconButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton6.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.iconButton6.ForeColor = System.Drawing.Color.Gainsboro;
-            this.iconButton6.IconChar = FontAwesome.Sharp.IconChar.TicketAlt;
-            this.iconButton6.IconColor = System.Drawing.Color.Gainsboro;
-            this.iconButton6.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton6.IconSize = 30;
-            this.iconButton6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton6.Location = new System.Drawing.Point(0, 345);
-            this.iconButton6.Name = "iconButton6";
-            this.iconButton6.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.iconButton6.Rotation = 0D;
-            this.iconButton6.Size = new System.Drawing.Size(210, 55);
-            this.iconButton6.TabIndex = 6;
-            this.iconButton6.Text = "Tickets";
-            this.iconButton6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton6.UseVisualStyleBackColor = true;
-            this.iconButton6.Click += new System.EventHandler(this.iconButton6_Click);
-            // 
-            // btnPeriodos
-            // 
-            this.btnPeriodos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnPeriodos.FlatAppearance.BorderSize = 0;
-            this.btnPeriodos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPeriodos.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.btnPeriodos.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnPeriodos.IconChar = FontAwesome.Sharp.IconChar.CalendarAlt;
-            this.btnPeriodos.IconColor = System.Drawing.Color.Gainsboro;
-            this.btnPeriodos.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnPeriodos.IconSize = 30;
-            this.btnPeriodos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPeriodos.Location = new System.Drawing.Point(0, 290);
-            this.btnPeriodos.Name = "btnPeriodos";
-            this.btnPeriodos.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnPeriodos.Rotation = 0D;
-            this.btnPeriodos.Size = new System.Drawing.Size(210, 55);
-            this.btnPeriodos.TabIndex = 5;
-            this.btnPeriodos.Text = "Periodos";
-            this.btnPeriodos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPeriodos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnPeriodos.UseVisualStyleBackColor = true;
-            this.btnPeriodos.Click += new System.EventHandler(this.iconButton5_Click);
-            // 
-            // btnPagos
-            // 
-            this.btnPagos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnPagos.FlatAppearance.BorderSize = 0;
-            this.btnPagos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPagos.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.btnPagos.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnPagos.IconChar = FontAwesome.Sharp.IconChar.CcVisa;
-            this.btnPagos.IconColor = System.Drawing.Color.Gainsboro;
-            this.btnPagos.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnPagos.IconSize = 30;
-            this.btnPagos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPagos.Location = new System.Drawing.Point(0, 235);
-            this.btnPagos.Name = "btnPagos";
-            this.btnPagos.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnPagos.Rotation = 0D;
-            this.btnPagos.Size = new System.Drawing.Size(210, 55);
-            this.btnPagos.TabIndex = 4;
-            this.btnPagos.Text = "Pagos";
-            this.btnPagos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPagos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnPagos.UseVisualStyleBackColor = true;
-            this.btnPagos.Click += new System.EventHandler(this.iconButton4_Click);
             // 
             // btnComprobantes
             // 
@@ -373,6 +301,78 @@
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
             // 
+            // btnPagos
+            // 
+            this.btnPagos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPagos.FlatAppearance.BorderSize = 0;
+            this.btnPagos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPagos.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btnPagos.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnPagos.IconChar = FontAwesome.Sharp.IconChar.CcVisa;
+            this.btnPagos.IconColor = System.Drawing.Color.Gainsboro;
+            this.btnPagos.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnPagos.IconSize = 30;
+            this.btnPagos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPagos.Location = new System.Drawing.Point(0, 235);
+            this.btnPagos.Name = "btnPagos";
+            this.btnPagos.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnPagos.Rotation = 0D;
+            this.btnPagos.Size = new System.Drawing.Size(210, 55);
+            this.btnPagos.TabIndex = 4;
+            this.btnPagos.Text = "Pagos";
+            this.btnPagos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPagos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnPagos.UseVisualStyleBackColor = true;
+            this.btnPagos.Click += new System.EventHandler(this.iconButton4_Click);
+            // 
+            // btnPeriodos
+            // 
+            this.btnPeriodos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPeriodos.FlatAppearance.BorderSize = 0;
+            this.btnPeriodos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPeriodos.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btnPeriodos.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnPeriodos.IconChar = FontAwesome.Sharp.IconChar.CalendarAlt;
+            this.btnPeriodos.IconColor = System.Drawing.Color.Gainsboro;
+            this.btnPeriodos.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnPeriodos.IconSize = 30;
+            this.btnPeriodos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPeriodos.Location = new System.Drawing.Point(0, 290);
+            this.btnPeriodos.Name = "btnPeriodos";
+            this.btnPeriodos.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnPeriodos.Rotation = 0D;
+            this.btnPeriodos.Size = new System.Drawing.Size(210, 55);
+            this.btnPeriodos.TabIndex = 5;
+            this.btnPeriodos.Text = "Periodos";
+            this.btnPeriodos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPeriodos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnPeriodos.UseVisualStyleBackColor = true;
+            this.btnPeriodos.Click += new System.EventHandler(this.iconButton5_Click);
+            // 
+            // iconButton6
+            // 
+            this.iconButton6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.iconButton6.FlatAppearance.BorderSize = 0;
+            this.iconButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton6.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.iconButton6.ForeColor = System.Drawing.Color.Gainsboro;
+            this.iconButton6.IconChar = FontAwesome.Sharp.IconChar.TicketAlt;
+            this.iconButton6.IconColor = System.Drawing.Color.Gainsboro;
+            this.iconButton6.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton6.IconSize = 30;
+            this.iconButton6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton6.Location = new System.Drawing.Point(0, 345);
+            this.iconButton6.Name = "iconButton6";
+            this.iconButton6.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.iconButton6.Rotation = 0D;
+            this.iconButton6.Size = new System.Drawing.Size(210, 55);
+            this.iconButton6.TabIndex = 6;
+            this.iconButton6.Text = "Tickets";
+            this.iconButton6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButton6.UseVisualStyleBackColor = true;
+            this.iconButton6.Click += new System.EventHandler(this.iconButton6_Click);
+            // 
             // frmCinema
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -402,13 +402,10 @@
         #endregion
 
         private System.Windows.Forms.Panel panelMenu;
-        private FontAwesome.Sharp.IconButton btnPagos;
         private FontAwesome.Sharp.IconButton btnComprobantes;
         private FontAwesome.Sharp.IconButton btnActores;
         private FontAwesome.Sharp.IconButton iconButton1;
         private System.Windows.Forms.Panel panel2;
-        private FontAwesome.Sharp.IconButton iconButton6;
-        private FontAwesome.Sharp.IconButton btnPeriodos;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblFormularioHijo;
         private FontAwesome.Sharp.IconPictureBox iconoFormularioHijo;
@@ -420,6 +417,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private FontAwesome.Sharp.IconButton iconButton6;
+        private FontAwesome.Sharp.IconButton btnPeriodos;
+        private FontAwesome.Sharp.IconButton btnPagos;
     }
 }
 
